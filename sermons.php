@@ -336,55 +336,67 @@
     <h2>Recent Sermons & Live Streams</h2>
     <p>Browse through our recent messages from God's Word.</p>
 
-    <div class="video-grid">
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe 
-            src="https://www.youtube.com/embed/H6CifUmHyPc" 
-            allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-info">
-          <h3>Sunday Worship Service</h3>
-          <p>Join us for worship in spirit and in truth</p>
-          <a href="https://www.youtube.com/watch?v=H6CifUmHyPc" target="_blank" class="watch-btn">Watch on YouTube</a>
-        </div>
-      </div>
+   <div class="video-grid">
 
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe 
-            src="https://www.youtube.com/embed?list=UUeuclidchurchofchrist&listType=user_uploads" 
-            allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-info">
-          <h3>Latest Upload</h3>
-          <p>Our most recent sermon</p>
-          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" class="watch-btn">View All Videos</a>
-        </div>
-      </div>
-
-      <div class="video-card">
-        <div class="video-wrapper">
-          <iframe 
-            src="https://www.youtube.com/embed?list=UUeuclidchurchofchrist&listType=user_uploads" 
-            allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            loading="lazy">
-          </iframe>
-        </div>
-        <div class="video-info">
-          <h3>Bible Study Classes</h3>
-          <p>Wednesday night teachings</p>
-          <a href="https://www.youtube.com/@euclidchurchofchrist/streams" target="_blank" class="watch-btn">Watch Studies</a>
-        </div>
-      </div>
+  <!-- MAIN RECENT STREAMS PLAYLIST -->
+  <div class="video-card">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/videoseries?list=PLEm3Z8yWWC_b9cXi5DOO70_OM4ZKaoUqo" 
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        loading="lazy">
+      </iframe>
     </div>
+    <div class="video-info">
+      <h3>Recent Live Streams & Sermons</h3>
+      <p>Watch our most recent services and messages</p>
+      <a href="https://www.youtube.com/playlist?list=PLEm3Z8yWWC_b9cXi5DOO70_OM4ZKaoUqo" target="_blank" class="watch-btn">
+        Open Full Playlist
+      </a>
+    </div>
+  </div>
+
+  <!-- FILLER PLACEHOLDER 1 -->
+  <div class="video-card">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/l-AQLu4Mw6o" 
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="video-info">
+      <h3>Featured Sermon</h3>
+      <p>A highlighted message from our ministry</p>
+      <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" class="watch-btn">
+        View More Videos
+      </a>
+    </div>
+  </div>
+
+  <!-- FILLER PLACEHOLDER 2 -->
+  <div class="video-card">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/l-AQLu4Mw6o" 
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+    <div class="video-info">
+      <h3>Bible Study Archive</h3>
+      <p>Teachings and midweek studies</p>
+      <a href="https://www.youtube.com/@euclidchurchofchrist/streams" target="_blank" class="watch-btn">
+        Watch Studies
+      </a>
+    </div>
+  </div>
+
+</div>
+
 
     <a href="https://www.youtube.com/@euclidchurchofchrist" target="_blank" class="channel-link">
       Visit Our YouTube Channel for All Sermons
