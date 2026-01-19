@@ -33,6 +33,12 @@
       line-height: 1.6;
       color: #333;
       font-size: 16px;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.6)), url(images/ecoc-banner2.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
 
     /* Typography - Responsive Font Sizes */
@@ -41,24 +47,28 @@
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 1rem;
+      color: #f1f1f1;
     }
 
     h2 {
       font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 600;
       margin-bottom: 0.875rem;
+      color: #f1f1f1;
     }
 
     h3 {
       font-size: clamp(1.25rem, 2.5vw, 1.5rem);
       font-weight: 600;
       margin-bottom: 0.75rem;
+      color: #f1f1f1;
     }
 
     p {
       font-size: clamp(1rem, 1.5vw, 1.125rem);
       margin-bottom: 1rem;
       line-height: 1.7;
+      color: #f1f1f1;
     }
 
     a {
@@ -223,6 +233,8 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 12px;
     }
 
     .hero-btn {
@@ -243,17 +255,25 @@
     }
 
     .service-times {
-      background: #f3f4f6;
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
     }
 
     .service-time {
-      background: white;
+      background: rgba(255, 255, 255, 0.95);
       padding: 2rem;
       margin: 1.5rem auto;
       max-width: 600px;
       border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .service-time h3 {
+      color: #333;
+    }
+
+    .service-time p {
+      color: #333;
     }
 
     .step-by-step {
@@ -302,12 +322,12 @@
     }
 
     .welcome {
-      background: white;
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
     }
 
     .online-platforms {
-      background: #f9fafb;
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
     }
 
@@ -319,15 +339,17 @@
 
     .online-platforms li {
       padding: 1rem;
-      background: white;
+      background: rgba(255, 255, 255, 0.95);
       margin: 0.75rem 0;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       font-size: clamp(1rem, 1.5vw, 1.125rem);
+      color: #333;
     }
 
     .features {
       text-align: center;
+      background: rgba(0, 0, 0, 0.6);
     }
 
     .row {
@@ -353,7 +375,7 @@
     }
 
     .about {
-      background: #f3f4f6;
+      background: rgba(0, 0, 0, 0.6);
       text-align: center;
     }
 
