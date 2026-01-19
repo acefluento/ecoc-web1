@@ -340,67 +340,39 @@
 
   <!-- MAIN RECENT STREAMS PLAYLIST -->
   <div class="video-card">
-    <div class="video-wrapper">
-      <iframe 
-        src="https://www.youtube.com/embed/videoseries?list=PLEm3Z8yWWC_b9cXi5DOO70_OM4ZKaoUqo" 
-        allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        loading="lazy">
-      </iframe>
+    <div class="video-wrapper" style="background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%); display: flex; align-items: center; justify-content: center;">
+      <p style="color: white; font-weight: 600; padding: 2rem; text-align: center;">Video Placeholder</p>
     </div>
     <div class="video-info">
       <h3>Recent Live Streams & Sermons</h3>
-      <p>Watch our most recent services and messages</p>
-      <a href="https://www.youtube.com/playlist?list=PLEm3Z8yWWC_b9cXi5DOO70_OM4ZKaoUqo" target="_blank" class="watch-btn">
-        Open Full Playlist
-      </a>
+      <p>Watch our most recent services and messages. Join us for inspiring teachings about God's Word and spiritual growth through our community.</p>
     </div>
   </div>
 
   <!-- FILLER PLACEHOLDER 1 -->
   <div class="video-card">
-    <div class="video-wrapper">
-      <iframe 
-        src="https://www.youtube.com/embed/l-AQLu4Mw6o" 
-        allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        loading="lazy">
-      </iframe>
+    <div class="video-wrapper" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display: flex; align-items: center; justify-content: center;">
+      <p style="color: white; font-weight: 600; padding: 2rem; text-align: center;">Video Placeholder</p>
     </div>
     <div class="video-info">
       <h3>Featured Sermon</h3>
-      <p>A highlighted message from our ministry</p>
-      <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" class="watch-btn">
-        View More Videos
-      </a>
+      <p>A highlighted message from our ministry. Discover powerful teachings focused on practical application of biblical principles to strengthen your faith and relationship with God.</p>
     </div>
   </div>
 
   <!-- FILLER PLACEHOLDER 2 -->
   <div class="video-card">
-    <div class="video-wrapper">
-      <iframe 
-        src="https://www.youtube.com/embed/l-AQLu4Mw6o" 
-        allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        loading="lazy">
-      </iframe>
+    <div class="video-wrapper" style="background: linear-gradient(135deg, #1877f2 0%, #0c63d4 100%); display: flex; align-items: center; justify-content: center;">
+      <p style="color: white; font-weight: 600; padding: 2rem; text-align: center;">Video Placeholder</p>
     </div>
     <div class="video-info">
       <h3>Bible Study Archive</h3>
-      <p>Teachings and midweek studies</p>
-      <a href="https://www.youtube.com/@euclidchurchofchrist/streams" target="_blank" class="watch-btn">
-        Watch Studies
-      </a>
+      <p>Teachings and midweek studies designed to deepen your understanding of Scripture. Explore in-depth discussions on topics that strengthen your spiritual journey and biblical literacy.</p>
     </div>
   </div>
 
 </div>
 
-
-    <a href="https://www.youtube.com/@euclidchurchofchrist" target="_blank" class="channel-link">
-      Visit Our YouTube Channel for All Sermons
-    </a>
   </section>
 
   <footer>

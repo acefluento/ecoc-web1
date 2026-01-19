@@ -346,7 +346,7 @@
   <div class="contact-buttons">
     <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
     <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
-    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
+    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
   </div>
 
   <div class="page-header">
