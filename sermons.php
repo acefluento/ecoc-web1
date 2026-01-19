@@ -191,18 +191,32 @@
       margin: 0 auto;
     }
 
-    .video-container {
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
       margin: 2rem auto;
-      max-width: 900px;
+      max-width: 1200px;
+    }
+
+    .video-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
 
     .video-wrapper {
       position: relative;
       width: 100%;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      padding-top: 56.25%;
       overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
       background: #000;
     }
 
@@ -215,83 +229,18 @@
       border: none;
     }
 
-    .channel-link {
-      display: inline-block;
-      background: #aa2f21;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-top: 2rem;
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
-      transition: all 0.3s;
-    }
-
-    .channel-link:hover {
-      background: #8a2519;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .live-streams {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 3rem 1.5rem;
-      text-align: center;
-    }
-
-    .streams-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .stream-card {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-
-    .stream-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    }
-
-    .stream-thumbnail {
-      position: relative;
-      width: 100%;
-      padding-top: 56.25%;
-      overflow: hidden;
-      background: #000;
-    }
-
-    .stream-thumbnail iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border: none;
-    }
-
-    .stream-info {
+    .video-info {
       padding: 1.5rem;
       text-align: left;
     }
 
-    .stream-info h3 {
+    .video-info h3 {
       color: #aa2f21;
       font-size: clamp(1.125rem, 2vw, 1.25rem);
       margin-bottom: 0.5rem;
     }
 
-    .stream-info p {
+    .video-info p {
       color: #333;
       font-size: clamp(0.875rem, 1.5vw, 1rem);
       margin-bottom: 1rem;
@@ -312,6 +261,25 @@
       background: #8a2519;
       color: white;
       transform: translateY(-2px);
+    }
+
+    .channel-link {
+      display: inline-block;
+      background: #aa2f21;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 2rem;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      transition: all 0.3s;
+    }
+
+    .channel-link:hover {
+      background: #8a2519;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     footer {
@@ -336,7 +304,7 @@
         gap: 1rem;
       }
 
-      .streams-grid {
+      .video-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
       }
@@ -365,77 +333,61 @@
   </div>
 
   <section class="sermon-section">
-    <h2>All Recent Sermons</h2>
-    <p>Browse through our complete collection of sermons and teachings from the Word of God.</p>
-    
-    <div class="video-container">
-      <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube.com/embed/videoseries?list=UU@euclidchurchofchrist" 
-          allowfullscreen
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-        </iframe>
-      </div>
-    </div>
+    <h2>Recent Sermons & Live Streams</h2>
+    <p>Browse through our recent messages from God's Word.</p>
 
-    <a href="https://www.youtube.com/@euclidchurchofchrist/streams" target="_blank" class="channel-link">
-      Visit Our YouTube Channel
-    </a>
-  </section>
-
-  <section class="live-streams">
-    <h2>Recent Live Streams</h2>
-    <p>Watch our most recent Sunday worship services and special events.</p>
-
-    <div class="streams-grid">
-      <div class="stream-card">
-        <div class="stream-thumbnail">
+    <div class="video-grid">
+      <div class="video-card">
+        <div class="video-wrapper">
           <iframe 
             src="https://www.youtube.com/embed/H6CifUmHyPc" 
             allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            loading="lazy">
           </iframe>
         </div>
-        <div class="stream-info">
+        <div class="video-info">
           <h3>Sunday Worship Service</h3>
           <p>Join us for worship in spirit and in truth</p>
           <a href="https://www.youtube.com/watch?v=H6CifUmHyPc" target="_blank" class="watch-btn">Watch on YouTube</a>
         </div>
       </div>
 
-      <div class="stream-card">
-        <div class="stream-thumbnail">
+      <div class="video-card">
+        <div class="video-wrapper">
           <iframe 
-            src="https://www.youtube.com/embed?listType=user_uploads&list=@euclidchurchofchrist" 
+            src="https://www.youtube.com/embed?list=UUeuclidchurchofchrist&listType=user_uploads" 
             allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            loading="lazy">
           </iframe>
         </div>
-        <div class="stream-info">
-          <h3>Recent Sermons</h3>
-          <p>View our latest messages from God's Word</p>
+        <div class="video-info">
+          <h3>Latest Upload</h3>
+          <p>Our most recent sermon</p>
           <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" class="watch-btn">View All Videos</a>
         </div>
       </div>
 
-      <div class="stream-card">
-        <div class="stream-thumbnail">
+      <div class="video-card">
+        <div class="video-wrapper">
           <iframe 
-            src="https://www.youtube.com/embed?listType=user_uploads&list=@euclidchurchofchrist" 
+            src="https://www.youtube.com/embed?list=UUeuclidchurchofchrist&listType=user_uploads" 
             allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            loading="lazy">
           </iframe>
         </div>
-        <div class="stream-info">
+        <div class="video-info">
           <h3>Bible Study Classes</h3>
-          <p>Wednesday night Bible study recordings</p>
+          <p>Wednesday night teachings</p>
           <a href="https://www.youtube.com/@euclidchurchofchrist/streams" target="_blank" class="watch-btn">Watch Studies</a>
         </div>
       </div>
     </div>
 
-    <a href="https://www.youtube.com/@euclidchurchofchrist" target="_blank" class="channel-link" style="margin-top: 3rem;">
-      Subscribe to Our Channel
+    <a href="https://www.youtube.com/@euclidchurchofchrist" target="_blank" class="channel-link">
+      Visit Our YouTube Channel for All Sermons
     </a>
   </section>
 
