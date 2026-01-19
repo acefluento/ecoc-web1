@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Church Website</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Church of Christ - Euclid, OH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     window.nucleusLauncherSettings = {
       launcherId: '44c0ab401da5476a1636',
@@ -20,21 +22,179 @@
     })(window, document);
   </script>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      font-size: 16px;
+    }
+
+    /* Typography - Responsive Font Sizes */
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 0.875rem;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    a {
+      color: #aa2f21;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #8a2519;
+    }
+
+    /* Top Address Header */
+    .top-header {
+      background: #aa2f21;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1.5rem;
+    }
+
+    .top-header .address {
+      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      font-weight: 600;
+      opacity: 0.95;
+      margin: 0;
+    }
+
+    /* Navigation */
+    .nav {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      font-weight: 500;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Contact Buttons */
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 1rem;
+      background: #f9fafb;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 0.875rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      transition: all 0.3s;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .phone-btn {
+      background: #aa2f21;
+      color: white;
+    }
+
+    .phone-btn:hover {
+      background: #8a2519;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .email-btn {
+      background: #059669;
+      color: white;
+    }
+
+    .email-btn:hover {
+      background: #047857;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .facebook-btn {
+      background: #1877f2;
+      color: white;
+    }
+
+    .facebook-btn:hover {
+      background: #0c63d4;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+    }
+
     .video-container {
       display: flex;
       justify-content: center;
-      padding: 20px;
+      padding: 2rem 1.5rem;
+      background: #f9fafb;
     }
 
     .video-wrapper {
       position: relative;
-      width: 80%;
+      width: 100%;
       max-width: 800px;
-      padding-top: 56.25%; /* 16:9 Aspect Ratio */
+      padding-top: 56.25%;
       overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .video-wrapper iframe {
@@ -45,54 +205,237 @@
       left: 0;
       border: none;
     }
+
+    .svg-container {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .svg-container img {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+
+    .text-box {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      background: #aa2f21;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      margin-top: 1rem;
+      transition: background 0.3s;
+    }
+
+    .hero-btn:hover {
+      background: #8a2519;
+      color: white;
+    }
+
+    .service-times {
+      background: #f3f4f6;
+      text-align: center;
+    }
+
+    .service-time {
+      background: white;
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .step-by-step {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .step-by-step > div {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .step-number {
+      display: block;
+      font-weight: 700;
+      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      color: #aa2f21;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact {
+      background: #1e293b;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h1 {
+      color: white;
+    }
+
+    .contact a {
+      color: #60a5fa;
+      display: block;
+      margin: 0.5rem 0;
+    }
+
+    .contact a:hover {
+      color: #93c5fd;
+    }
+
+    .welcome {
+      background: white;
+      text-align: center;
+    }
+
+    .online-platforms {
+      background: #f9fafb;
+      text-align: center;
+    }
+
+    .online-platforms ul {
+      list-style: none;
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+
+    .online-platforms li {
+      padding: 1rem;
+      background: white;
+      margin: 0.75rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+    }
+
+    .features {
+      text-align: center;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .feature-col {
+      text-align: center;
+    }
+
+    .feature-circle {
+      margin-bottom: 1rem;
+    }
+
+    .feature-circle img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .about {
+      background: #f3f4f6;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    footer p {
+      margin: 0.75rem 0;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+    }
+
+    /* Mobile specific adjustments */
+    @media (max-width: 768px) {
+      section {
+        padding: 2rem 1rem;
+      }
+
+      .top-header {
+        padding: 2rem 1rem;
+      }
+
+      .nav ul {
+        gap: 1rem;
+        font-size: 0.875rem;
+      }
+
+      .row {
+        gap: 2rem;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div class="video-container">
-    <div class="video-wrapper">
-      <iframe loading="lazy" src="https://www.canva.com/design/DAGICkgOF84/ja5NHl3dJFjT9KcqffU0Xw/watch?embed&autoplay=1"
-        allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
-    </div>
+  <!-- Top Address Header -->
+  <div class="top-header">
+    <p class="address">635 E. 250th St, Euclid, OH</p>
   </div>
-  <a href="https://www.canva.com/design/DAGICkgOF84/ja5NHl3dJFjT9KcqffU0Xw/watch?utm_content=DAGICkgOF84&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
-    target="_blank" rel="noopener">COC website tutorial</a><>
 
-  <div class="container">
-    <div class="logo"></div>
-    <div class="service-times">
-      <p>Sunday Worship: 9:00 AM | Wednesday Worship: 7:00 PM</p>
-    </div>
+  <!-- Navigation -->
+  <nav class="nav">
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="login.php">Login</a></li>
+      <li><a href="register.php">Register</a></li>
+      <li><a href="sermons.php">Sermons</a></li>
+      <li><a href="events.php">Events</a></li>
+      <li><a href="about.php">About Church of Christ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Buttons -->
+  <div class="contact-buttons">
+    <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
+    <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
+    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
   </div>
+
   <div class="svg-container">
     <img src="images/C8F89E55-50B3-48DD-BB65-5B27041FF944.png" alt="Euclid Church of Christ Logo" />
   </div>
-  <section class="header">
-    <div class="container">
-      <div class="nav">
-        <nav>
-          <a href="index.php"><img src="images/ecocqr1.png" alt="logo" width="150"></a>
-          <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()"></i>
-            <ul>
-              <li><a href="index.php">HOME</a></li>
-              <li><a href="login.php">LOGIN</a></li>
-              <li><a href="register.php">REGISTER</a></li>
-              <li><a href="sermons.php">SERMONS</a></li>
-              <li><a href="events.php">EVENTS</a></li>
-              <li><a href="about.php">ABOUT CHURCH OF CHRIST</a></li>
-            </ul>
-          </div>
-          <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-      </div>
-      <div class="text-box">
-        <h1>Welcome!</h1>
-        <p>At Church of Christ, Euclid OH, we believe in the power of God's love, the divinity of Jesus Christ, and the guidance of the Holy Spirit.</p><br>
-        <a href="http://www.churchofchristeuclid.org/" class="hero-btn">Visit us for Worship Service</a>
-      </div>
-    </div>
-  </section>
+
+  <div class="text-box">
+    <h1>The Church of Christ Welcomes You</h1>
+    <p>We are delighted that you have taken the time to visit us today!</p>
+    <p>The Church of Christ in Euclid believes in the New Testament gospel, and follows the Examples and teachings of Jesus Christ.</p>
+    <p>The Church of Christ is apart of the 1 boDY. We continuously strive to study and preach sound doctrine. (Titus 2:1)</p>
+    <p>Every First day of the week - Congregation meets @ 635 E. 250th St, Euclid, OH for worship and fellowship in spirit and in truth.</p>
+    <a href="http://www.churchofchristeuclid.org/" class="hero-btn">Visit us for Worship Service</a>
+  </div>
+
   <section class="service-times">
     <h1>Service Times</h1>
     <div class="service-time">
@@ -105,27 +448,8 @@
       <p>Bible Study: @ 7PM</p>
       <p>"TECH TIPS" (beginner tech. course): @ 8PM (In Person & on Zoom)</p>
     </div>
-    <div class="step-by-step">
-      <div>
-        <span class="step-number">Step 1</span>
-        <div class="step-description">
-          <p>This is the first step in the process.</p>
-        </div>
-      </div>
-      <div>
-        <span class="step-number">Step 2</span>
-        <div class="step-description">
-          <p>This is the second step in the process.</p>
-        </div>
-      </div>
-      <div>
-        <span class="step-number">Step 3</span>
-        <div class="step-description">
-          <p>This is the third and final step in the process.</p>
-        </div>
-      </div>
-    </div>
   </section>
+
   <section class="contact">
     <h1>Contact Us</h1>
     <p>Call Us Now: +1-216-261-6505</p>
@@ -133,6 +457,7 @@
     <a href="https://www.euclidcoc.org" target="_blank">www.euclidcoc.org</a>
     <a href="https://www.facebook.com/euclidchurchofchrist" target="_blank">Join our Facebook Page</a>
   </section>
+
   <section class="welcome">
     <h1>Welcome to the Church of Christ</h1>
     <p>We are delighted that you have taken the time to visit us today!</p>
@@ -140,6 +465,7 @@
     <p>The Church of Christ is apart of the 1 boDY. We continuously strive to study and preach sound doctrine. (Titus 2:1)</p>
     <p>Every First day of the week - Congregation meets @ 635 E. 250th St, Euclid, OH for worship and fellowship in spirit and in truth.</p>
   </section>
+
   <section class="online-platforms">
     <h1>Euclid COC's Online Platforms</h1>
     <p>We strive to keep a loving environment; one where members of the body can worship and participate with us from home, praising and giving all glory to God!</p>
@@ -151,10 +477,10 @@
       <li>Facebook Page</li>
     </ul>
   </section>
-  <!-----------FEATURES--------->
+
   <section class="features">
     <h1>Our Website Features</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, iure ea dolor dolores autem magni quasi obcaecati culpa dicta dolorum, veniam quae voluptatibus doloremque deserunt. Est ea earum quas ab!</p>
+    <p>Explore the various ways you can connect with our church community and grow in your faith journey.</p>
 
     <div class="row">
       <div class="feature-col">
@@ -177,11 +503,13 @@
       </div>
     </div>
   </section>
+
   <section class="about">
     <h1>About the Church of Christ</h1>
     <p>The Euclid Church of Christ is a congregation of Christians striving to serve God according to the pattern of the New Testament. We believe that the Bible is the inspired Word of God and our only guide in religious matters. We have no human creed or denominational ties. Our goal is to simply be Christians, nothing more and nothing less.</p>
     <p>Our worship services are designed to follow the simple and meaningful pattern revealed in the New Testament. We pray, sing, partake of the Lord's Supper, give as we have been prospered, and hear the Word of God proclaimed. We invite you to visit us and learn more about the Church of Christ.</p>
   </section>
+
   <footer>
     <p>If you have any questions or would like info on placing membership with us, please don't hesitate to reach out!</p>
     <p>Come visit us in person!</p>
