@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Church of Christ - Euclid, OH</title>
+  <title>Euclid Church of Christ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,11 +41,10 @@
       min-height: 100vh;
     }
 
-    /* Typography - Responsive Font Sizes */
     h1 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.1;
       margin-bottom: 1rem;
       color: #f1f1f1;
     }
@@ -81,7 +80,6 @@
       color: #8a2519;
     }
 
-    /* Top Address Header */
     .top-header {
       background: #aa2f21;
       color: white;
@@ -96,7 +94,6 @@
       margin: 0;
     }
 
-    /* Navigation */
     .nav {
       background: white;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -119,9 +116,9 @@
       font-size: clamp(0.875rem, 1.5vw, 1rem);
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      color: #aa2f21;
     }
 
-    /* Contact Buttons */
     .contact-buttons {
       display: flex;
       justify-content: center;
@@ -190,32 +187,6 @@
       padding: 3rem 1.5rem;
     }
 
-    .video-container {
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1.5rem;
-      background: #f9fafb;
-    }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      padding-top: 56.25%;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      border: none;
-    }
-
     .svg-container {
       display: flex;
       justify-content: center;
@@ -274,31 +245,6 @@
 
     .service-time p {
       color: #333;
-    }
-
-    .step-by-step {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .step-by-step > div {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .step-number {
-      display: block;
-      font-weight: 700;
-      font-size: clamp(1.125rem, 2vw, 1.375rem);
-      color: #aa2f21;
-      margin-bottom: 0.5rem;
     }
 
     .contact {
@@ -386,6 +332,94 @@
       margin-bottom: 1.5rem;
     }
 
+    .announcements {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .announcement-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 700px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .announcement-box h3 {
+      color: #aa2f21;
+      margin-bottom: 1rem;
+    }
+
+    .announcement-box p {
+      color: #333;
+    }
+
+    .bible-verse {
+      background: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .verse-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-style: italic;
+    }
+
+    .verse-box h3 {
+      color: #aa2f21;
+      font-style: normal;
+      margin-bottom: 1rem;
+    }
+
+    .verse-box p {
+      color: #333;
+    }
+
+    .zoom-info {
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .zoom-box {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .zoom-box h3 {
+      color: #aa2f21;
+    }
+
+    .zoom-box p {
+      color: #333;
+    }
+
+    .zoom-box a {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 0.875rem 1.5rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+
+    .zoom-box a:hover {
+      background: #1d4ed8;
+      color: white;
+    }
+
     footer {
       background: #0f172a;
       color: white;
@@ -396,9 +430,9 @@
     footer p {
       margin: 0.75rem 0;
       font-size: clamp(0.875rem, 1.5vw, 1rem);
+      color: white;
     }
 
-    /* Mobile specific adjustments */
     @media (max-width: 768px) {
       section {
         padding: 2rem 1rem;
@@ -421,24 +455,14 @@
 </head>
 
 <body>
-  <!-- Top Address Header -->
-  <div class="top-header">
-    <p class="address">635 E. 250th St, Euclid, OH</p>
-  </div>
-
-  <!-- Navigation -->
   <nav class="nav">
     <ul>
       <li><a href="index.php">Home</a></li>
-      <li><a href="login.php">Login</a></li>
-      <li><a href="register.php">Register</a></li>
       <li><a href="sermons.php">Sermons</a></li>
-      <li><a href="events.php">Events</a></li>
       <li><a href="about.php">About Church of Christ</a></li>
     </ul>
   </nav>
 
-  <!-- Contact Buttons -->
   <div class="contact-buttons">
     <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
     <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
@@ -451,82 +475,92 @@
 
   <div class="text-box">
     <h1>The Church of Christ Welcomes You</h1>
+    <p>Located in Euclid, OH</p>
     <p>We are delighted that you have taken the time to visit us today!</p>
     <p>The Church of Christ in Euclid believes in the New Testament gospel, and follows the Examples and teachings of Jesus Christ.</p>
     <p>The Church of Christ is apart of the 1 boDY. We continuously strive to study and preach sound doctrine. (Titus 2:1)</p>
     <p>Every First day of the week - Congregation meets @ 635 E. 250th St, Euclid, OH for worship and fellowship in spirit and in truth.</p>
-    <a href="http://www.churchofchristeuclid.org/" class="hero-btn">Visit us for Worship Service</a>
+    <p style="margin-top: 2rem; padding: 1.5rem; background: rgba(170, 47, 33, 0.9); border-radius: 8px;">
+      <strong>For more information about the Church of Christ and how we worship, visit our <a href="about.php" style="color: #fff; text-decoration: underline;">About Us</a> page.</strong>
+    </p>
+    <a href="http://www.euclidcoc.org/" class="hero-btn">WWW.EUCLIDCOC.ORG</a>
   </div>
 
   <section class="service-times">
     <h1>Service Times</h1>
     <div class="service-time">
       <h3>Sundays</h3>
-      <p>Bible Study: @ 10AM</p>
-      <p>Worship: @ 11AM (In Person & Live on YouTube)</p>
+      <p><strong>Bible Study:</strong> @ 10AM</p>
+      <p><strong>Worship:</strong> @ 11AM</p>
+      <p>(In Person & Live on YouTube)</p>
     </div>
     <div class="service-time">
       <h3>Wednesdays</h3>
-      <p>Bible Study: @ 7PM</p>
-      <p>"TECH TIPS" (beginner tech. course): @ 8PM (In Person & on Zoom)</p>
+      <p><strong>Bible Study:</strong> @ 7PM</p>
+      <p>(In Person & on Zoom)</p>
     </div>
   </section>
 
-  <section class="contact">
-    <h1>Contact Us</h1>
-    <p>Call Us Now: +1-216-261-6505</p>
-    <p>Address: 635 E. 250th St, Euclid, OH</p>
-    <a href="https://www.euclidcoc.org" target="_blank">www.euclidcoc.org</a>
-    <a href="https://www.facebook.com/euclidchurchofchrist" target="_blank">Join our Facebook Page</a>
-  </section>
-
-  <section class="welcome">
-    <h1>Welcome to the Church of Christ</h1>
-    <p>We are delighted that you have taken the time to visit us today!</p>
-    <p>The Church of Christ in Euclid believes in the New Testament gospel, and follows the Examples and teachings of Jesus Christ.</p>
-    <p>The Church of Christ is apart of the 1 boDY. We continuously strive to study and preach sound doctrine. (Titus 2:1)</p>
-    <p>Every First day of the week - Congregation meets @ 635 E. 250th St, Euclid, OH for worship and fellowship in spirit and in truth.</p>
-  </section>
-
   <section class="online-platforms">
-    <h1>Euclid COC's Online Platforms</h1>
+    <h1>1st Time Visitor & Members</h1>
+    <h2>Euclid COC's Online Platforms</h2>
     <p>We strive to keep a loving environment; one where members of the body can worship and participate with us from home, praising and giving all glory to God!</p>
+    <p><strong>Click the red checkmark (bottom right corner of this page)</strong></p>
     <ul>
-      <li>Member Visitor Connect Form</li>
-      <li>YouTube Live Streams + Sermons</li>
-      <li>Online Giving</li>
+      <li><a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" target="_blank">Member Visitor Connect Form</a></li>
+      <li><a href="https://www.youtube.com/@euclidchurchofchrist" target="_blank">YouTube Live Streams & Sermons</a></li>
+      <li><a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" target="_blank">Online Giving</a></li>
       <li>Weekly Bible Study Class via Zoom</li>
-      <li>Facebook Page</li>
+      <li><a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank">Facebook Page</a></li>
     </ul>
   </section>
 
-  <section class="features">
-    <h1>Our Website Features</h1>
-    <p>Explore the various ways you can connect with our church community and grow in your faith journey.</p>
+  <section class="announcements">
+    <h1>Announcements</h1>
+    <div class="announcement-box">
+      <h3>Welcome to All New Members and Visitors!</h3>
+      <p>You are our very special guests</p>
+      <p><strong>Friends & Family Day Coming Soon!</strong></p>
+    </div>
+  </section>
 
-    <div class="row">
-      <div class="feature-col">
-        <div class="feature-circle">
-          <img src="images/renderPlugin (1).png" alt="worship" width="200" height="200">
-        </div>
-        <h3>WORSHIP</h3>
-      </div>
-      <div class="feature-col">
-        <div class="feature-circle">
-          <img src="images/renderPlugin (2).png" alt="lesson and sermons" width="200" height="200">
-        </div>
-        <h3>LESSONS & SERMONS</h3>
-      </div>
-      <div class="feature-col">
-        <div class="feature-circle">
-          <img src="images/renderPlugin (3).png" alt="sunday night worship" width="200" height="200">
-        </div>
-        <h3>SUNDAY NIGHT WORSHIP</h3>
-      </div>
+  <section class="bible-verse">
+    <h1>Scripture</h1>
+    <div class="verse-box">
+      <h3>2 Timothy Chapter 3: Verses 16 & 17</h3>
+      <p><strong>16.)</strong> All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:</p>
+      <p><strong>17.)</strong> That the man of God may be perfect, throughly furnished unto all good works.</p>
+    </div>
+    <div class="verse-box">
+      <h3>Titus 2 Verses 1 & 2</h3>
+      <p><strong>(1).</strong> But speak thou the things which become sound doctrine:</p>
+      <p><strong>(2).</strong> That the aged men be sober, grave, temperate, sound in faith, in charity, in patience.</p>
+    </div>
+  </section>
+
+  <section class="zoom-info">
+    <h1>Wednesday Night Bible Study</h1>
+    <div class="zoom-box">
+      <h3>Join Us on Zoom</h3>
+      <p>For those who cannot make the trip to the building, please join on ZOOM!</p>
+      <p><strong>Every Wednesday @ 7pm EST</strong></p>
+      <p>At the church building:<br>635 EAST 250th St, Euclid, OH, 44132</p>
+      <a href="https://cwru.zoom.us/j/91317392459?pwd=Z1NuVGJLY3R4cGlwMzN1ZE4rbzNsQT09" target="_blank">Join Wednesday Night Bible Study</a>
+      <p style="margin-top: 1rem;"><strong>Meeting ID:</strong> 913 1739 2459</p>
+      <p><strong>Passcode:</strong> 481921</p>
     </div>
   </section>
 
   <section class="about">
+    <h1>Sunday Worship Service</h1>
+    <p>We worship in person every Sunday @ 11am.</p>
+    <p>We also <a href="https://www.youtube.com/watch?v=H6CifUmHyPc" target="_blank" style="color: #60a5fa;">stream live on YouTube</a> for those at home or out of town.</p>
+    <p>We are a loving and cheerful congregation here at the Euclid Church of Christ.</p>
+    <p>This website includes info about our services, events and includes resources for more information about the Church of Christ.</p>
+    <p>We believe in preaching and teaching from the Bible, the inspired word of God.</p>
+  </section>
+
+  <section class="features">
     <h1>About the Church of Christ</h1>
     <p>The Euclid Church of Christ is a congregation of Christians striving to serve God according to the pattern of the New Testament. We believe that the Bible is the inspired Word of God and our only guide in religious matters. We have no human creed or denominational ties. Our goal is to simply be Christians, nothing more and nothing less.</p>
     <p>Our worship services are designed to follow the simple and meaningful pattern revealed in the New Testament. We pray, sing, partake of the Lord's Supper, give as we have been prospered, and hear the Word of God proclaimed. We invite you to visit us and learn more about the Church of Christ.</p>
@@ -535,10 +569,10 @@
   <footer>
     <p>If you have any questions or would like info on placing membership with us, please don't hesitate to reach out!</p>
     <p>Come visit us in person!</p>
-    <p>635 EAST 250th St, Euclid, OH, 44132</p>
-    <p>Website Developed by Acefluento.</p>
+    <p><strong>635 EAST 250th St, Euclid, OH, 44132</strong></p>
     <p>Email: euclidcoc@gmail.com | Office: 216-261-6501</p>
     <p>Bookmark www.euclidcoc.org</p>
+    <p style="margin-top: 2rem;">Website Developed by Acefluento.</p>
   </footer>
 </body>
 

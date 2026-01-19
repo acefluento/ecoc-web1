@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Euclid Church of Christ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    window.nucleusLauncherSettings = {
+      launcherId: '44c0ab401da5476a1636',
+    };
+    (function (l, a, u, n, c, h) {
+      u = a.createElement('script');
+      u.type = 'text/javascript';
+      u.async = true;
+      u.src = 'https://launcher.nucleus.church/boot.latest.js';
+      n = a.getElementsByTagName('script')[0];
+      n.parentNode.insertBefore(u, n);
+    })(window, document);
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      font-size: 16px;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.6)), url(images/ecoc-banner2.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      color: #f1f1f1;
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 600;
+      margin-bottom: 0.875rem;
+      color: #f1f1f1;
+    }
+
+    h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #f1f1f1;
+    }
+
+    p {
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      color: #f1f1f1;
+    }
+
+    a {
+      color: #aa2f21;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #8a2519;
+    }
+
+    .nav {
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .nav a {
+      font-weight: 500;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #aa2f21;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1.5rem 1rem;
+      background: #f9fafb;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 0.875rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      transition: all 0.3s;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .phone-btn {
+      background: #aa2f21;
+      color: white;
+    }
+
+    .phone-btn:hover {
+      background: #8a2519;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .email-btn {
+      background: #059669;
+      color: white;
+    }
+
+    .email-btn:hover {
+      background: #047857;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .facebook-btn {
+      background: #1877f2;
+      color: white;
+    }
+
+    .facebook-btn:hover {
+      background: #0c63d4;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .page-header {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .beliefs-section {
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .worship-section {
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .content-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin: 2rem 0;
+    }
+
+    .content-text {
+      text-align: left;
+    }
+
+    .content-text h3 {
+      color: #aa2f21;
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .content-text p {
+      color: #f1f1f1;
+      margin-bottom: 1rem;
+    }
+
+    .content-text strong {
+      color: #aa2f21;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    .content-image {
+      text-align: center;
+    }
+
+    .content-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    .salvation-steps {
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .steps-list {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+
+    .steps-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .steps-list li {
+      color: #333;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      padding: 1rem;
+      margin: 0.75rem 0;
+      background: #f9fafb;
+      border-left: 4px solid #aa2f21;
+      border-radius: 8px;
+    }
+
+    .steps-list strong {
+      color: #aa2f21;
+      font-weight: 700;
+    }
+
+    .conversions-section {
+      background: rgba(0, 0, 0, 0.75);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .conversions-image {
+      margin: 2rem auto;
+      max-width: 800px;
+    }
+
+    .conversions-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background: #aa2f21;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      font-size: clamp(1rem, 1.5vw, 1.125rem);
+      transition: all 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #8a2519;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    footer p {
+      margin: 0.75rem 0;
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      color: white;
+    }
+
+    @media (max-width: 968px) {
+      .content-with-image {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      .nav ul {
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="sermons.php">Sermons</a></li>
+      <li><a href="about.php">About Church of Christ</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-buttons">
+    <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
+    <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
+    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
+  </div>
+
+  <div class="page-header">
+    <h1>Our Beliefs</h1>
+    <p>Learn about the Church of Christ and how we worship according to the New Testament pattern.</p>
+  </div>
+
+  <section class="worship-section">
+    <h2 style="text-align: center; margin-bottom: 2rem;">How We Worship</h2>
+    
+    <div class="content-with-image">
+      <div class="content-image">
+        <img src="images/5-acts-worship.jpg" alt="5 Acts of Worship" />
+      </div>
+      
+      <div class="content-text">
+        <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 12px;">
+          <h3 style="color: #aa2f21; margin-bottom: 1.5rem;">Head of the Church</h3>
+          <p style="color: #333;">Jesus Christ is God, in bodily form. <strong>(Colossians 2:9)</strong>. Jesus Christ is the head of the body, the church. <strong>(Colossians 1:18)</strong></p>
+          <p style="color: #333;">The Bible states that followers of Jesus Christ are to worship him in spirit and truth. <strong>(John 4:23-24)</strong></p>
+          
+          <h3 style="color: #aa2f21; margin: 1.5rem 0;">Sound Doctrine</h3>
+          <p style="color: #333;">We believe in teaching/preaching from the Bible as it is written in the scripture—in accordance with sound doctrine. <strong>(Titus 2:1; 1 Corinthians 4:17)</strong></p>
+          
+          <h3 style="color: #aa2f21; margin: 1.5rem 0;">The Five Acts of Worship</h3>
+          
+          <p style="color: #333;"><strong>SINGING:</strong> During worship we sing hymns, "speaking to one another in psalms and hymns and spiritual songs, singing and making melody with your hearts to the Lord." <strong>(Ephesians 5:19)</strong></p>
+          
+          <p style="color: #333;"><strong>OFFERING:</strong> We believe in giving an offering. As God blesses us throughout life, we give a fraction of what we receive for the upbuilding of God's kingdom. <strong>(2 Corinthians 9:7-8)</strong></p>
+          
+          <p style="color: #333;"><strong>COMMUNION:</strong> Each first day of the week, we break bread in communion with one another to commemorate the death, burial and resurrection of Jesus.</p>
+          
+          <p style="color: #333;"><strong>PRAYER:</strong> We believe in the power of prayer. The Bible states, "Therefore confess your sins to each other and pray for each other so that you may be healed. The prayer of a righteous person is powerful and effective." <strong>(James 5:16)</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salvation-steps">
+    <h2 style="text-align: center; margin-bottom: 2rem;">5 Steps to Salvation</h2>
+    
+    <div class="content-with-image">
+      <div class="content-text">
+        <p>In reverence to the path led before us, we turn to the scripture for the steps to salvation. The Bible tells us that all have sinned and fallen short of God's Glory. <strong>(Romans 3:23)</strong></p>
+        
+        <p>That being said, if we believe in God and follow in the steps of salvation we are promised eternal life. <strong>(John 3:16, Hebrews 5:8-9)</strong></p>
+        
+        <div class="steps-list">
+          <ul>
+            <li><strong>HEAR</strong> the word of God <em>(Romans 10:17, Romans 5:1-2)</em></li>
+            <li><strong>BELIEVE</strong> in the Lord Jesus <em>(1 John 5:13, Acts 16:31)</em></li>
+            <li><strong>CONFESS</strong> that Jesus is our Lord <em>(Romans 10:9, Acts 8:37, James 5:16)</em></li>
+            <li><strong>REPENT</strong> for our Sins <em>(Acts 17:30-31)</em></li>
+            <li><strong>BAPTISM</strong> into Christ <em>(James 5:16)</em></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="content-image">
+        <img src="images/5-steps-salvation.jpg" alt="5 Steps to Salvation" />
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <a href="mailto:euclidcoc@gmail.com" class="cta-btn">Contact Us to Learn More</a>
+    </div>
+  </section>
+
+  <section class="conversions-section">
+    <h2>Examples of Conversions</h2>
+    <p>Here we have some examples of conversions that took place in Acts, with a chart detailing the steps taken to reach salvation.</p>
+    
+    <div class="conversions-image">
+      <img src="images/conversions-chart.jpg" alt="Examples of Conversions in Acts" />
+    </div>
+    
+    <a href="mailto:euclidcoc@gmail.com" class="cta-btn">Ask Questions or Request Prayer</a>
+  </section>
+
+  <footer>
+    <p>If you have any questions or would like info on placing membership with us, please don't hesitate to reach out!</p>
+    <p>Come visit us in person!</p>
+    <p><strong>635 EAST 250th St, Euclid, OH, 44132</strong></p>
+    <p>Email: euclidcoc@gmail.com | Office: 216-261-6501</p>
+    <p>Bookmark www.euclidcoc.org</p>
+    <p style="margin-top: 2rem;">Website Developed by Acefluento.</p>
+  </footer>
+</body>
+
+</html>
