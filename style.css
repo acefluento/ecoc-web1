@@ -187,7 +187,18 @@ nav ul li a {
     border: 1px solid #f44336;
     background: #f44336;
 }
+/* Add to your external stylesheet */
+.info-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(170, 47, 33, 0.9);
+  border-radius: 8px;
+}
 
+.info-box a {
+  color: #fff;
+  text-decoration: underline;
+}
 nav .fa {
     display: none;
 }
