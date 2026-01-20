@@ -282,6 +282,28 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
+    .video-placeholder {
+      background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-placeholder.featured {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+
+    .video-placeholder.archive {
+      background: linear-gradient(135deg, #1877f2 0%, #0c63d4 100%);
+    }
+
+    .placeholder-text {
+      color: white;
+      font-weight: 600;
+      padding: 2rem;
+      text-align: center;
+    }
+
     footer {
       background: #0f172a;
       color: white;
@@ -324,7 +346,7 @@
   <div class="contact-buttons">
     <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
     <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
-    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
+    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
   </div>
 
   <div class="page-header">
@@ -340,8 +362,8 @@
 
   <!-- MAIN RECENT STREAMS PLAYLIST -->
   <div class="video-card">
-    <div class="video-wrapper" style="background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%); display: flex; align-items: center; justify-content: center;">
-      <p style="color: white; font-weight: 600; padding: 2rem; text-align: center;">Video Placeholder</p>
+    <div class="video-wrapper video-placeholder">
+      <p class="placeholder-text">Video Placeholder</p>
     </div>
     <div class="video-info">
       <h3>Recent Live Streams & Sermons</h3>
@@ -351,8 +373,8 @@
 
   <!-- FILLER PLACEHOLDER 1 -->
   <div class="video-card">
-    <div class="video-wrapper" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); display: flex; align-items: center; justify-content: center;">
-      <p style="color: white; font-weight: 600; padding: 2rem; text-align: center;">Video Placeholder</p>
+    <div class="video-wrapper video-placeholder featured">
+      <p class="placeholder-text">Video Placeholder</p>
     </div>
     <div class="video-info">
       <h3>Featured Sermon</h3>
@@ -362,8 +384,8 @@
 
   <!-- FILLER PLACEHOLDER 2 -->
   <div class="video-card">
-    <div class="video-wrapper" style="background: linear-gradient(135deg, #1877f2 0%, #0c63d4 100%); display: flex; align-items: center; justify-content: center;">
-      <p style="color: white; font-weight: 600; padding: 2rem; text-align: center;">Video Placeholder</p>
+    <div class="video-wrapper video-placeholder archive">
+      <p class="placeholder-text">Video Placeholder</p>
     </div>
     <div class="video-info">
       <h3>Bible Study Archive</h3>
