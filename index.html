@@ -1,674 +1,793 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Euclid Church of Christ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    window.nucleusLauncherSettings = {
-      launcherId: '44c0ab401da5476a1636',
-    };
-    (function (l, a, u, n, c, h) {
-      u = a.createElement('script');
-      u.type = 'text/javascript';
-      u.async = true;
-      u.src = 'https://launcher.nucleus.church/boot.latest.js';
-      n = a.getElementsByTagName('script')[0];
-      n.parentNode.insertBefore(u, n);
-    })(window, document);
-  </script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      font-size: 16px;
-      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.6)), url(images/ecoc-banner2.png);
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-    }
-
-    h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-      color: #f1f1f1;
-    }
-
-    h2 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 600;
-      margin-bottom: 0.875rem;
-      color: #f1f1f1;
-    }
-
-    h3 {
-      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      color: #f1f1f1;
-    }
-
-    p {
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
-      margin-bottom: 1rem;
-      line-height: 1.7;
-      color: #f1f1f1;
-    }
-
-    a {
-      color: #aa2f21;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #8a2519;
-    }
-
-    .top-header {
-      background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%);
-      color: white;
-      text-align: center;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 2px 12px rgba(170, 47, 33, 0.25);
-    }
-
-    .top-header .address {
-      font-size: clamp(1.125rem, 2vw, 1.375rem);
-      font-weight: 600;
-      opacity: 0.95;
-      margin: 0;
-    }
-
-    .nav {
-      background: white;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      padding: 0.75rem 1.5rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .nav a {
-      font-weight: 600;
-      font-size: clamp(0.875rem, 1.5vw, 0.95rem);
-      text-transform: capitalize;
-      letter-spacing: 0.3px;
-      color: #333;
-      transition: color 0.3s ease, border-bottom 0.3s ease;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid transparent;
-    }
-
-    .nav a:hover {
-      color: #aa2f21;
-      border-bottom-color: #aa2f21;
-    }
-
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1.25rem 1rem;
-      background: #ffffff;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    .contact-btn {
-      display: inline-block;
-      padding: 0.75rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      transition: all 0.2s ease;
-      text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-      border: none;
-    }
-
-    .phone-btn {
-      background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%);
-      color: white;
-    }
-
-    .phone-btn:hover {
-      background: linear-gradient(135deg, #8a2519 0%, #6a1d12 100%);
-      color: white;
-      box-shadow: 0 4px 12px rgba(170, 47, 33, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .email-btn {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
-      color: white;
-    }
-
-    .email-btn:hover {
-      background: linear-gradient(135deg, #047857 0%, #036450 100%);
-      color: white;
-      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .facebook-btn {
-      background: linear-gradient(135deg, #1877f2 0%, #0c63d4 100%);
-      color: white;
-    }
-
-    .facebook-btn:hover {
-      background: linear-gradient(135deg, #0c63d4 0%, #0a4bb5 100%);
-      color: white;
-      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    section {
-      padding: 3rem 1.5rem;
-    }
-
-    .svg-container {
-      display: flex;
-      justify-content: center;
-      padding: 3rem 1.5rem 2rem;
-      width: 100%;
-      background: linear-gradient(to bottom, rgba(4, 9, 30, 0.8), rgba(0, 0, 0, 0.9));
-    }
-
-    .svg-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      max-width: 400px;
-      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
-      animation: fadeInDown 0.8s ease-out;
-    }
-
-    .text-box {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3.5rem 2rem;
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(10, 10, 30, 0.75) 100%);
-      border-radius: 12px;
-      border-top: 3px solid #aa2f21;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-      animation: fadeInUp 0.8s ease-out 0.2s both;
-    }
-
-    .text-box h1 {
-      background: linear-gradient(135deg, #ff6b6b 0%, #aa2f21 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-size: clamp(2rem, 4vw, 2.75rem);
-      margin-bottom: 0.5rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-    }
-
-    .info-highlight {
-      margin-top: 2.5rem;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, rgba(170, 47, 33, 0.95) 0%, rgba(138, 37, 25, 0.95) 100%);
-      border-radius: 8px;
-      border-left: 4px solid #ff6b6b;
-      box-shadow: 0 4px 15px rgba(170, 47, 33, 0.25);
-    }
-
-    .hero-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%);
-      color: white;
-      padding: 1.1rem 2.5rem;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: clamp(1rem, 1.5vw, 1.2rem);
-      margin-top: 2rem;
-      transition: all 0.3s ease;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(170, 47, 33, 0.3);
-      border: 2px solid transparent;
-    }
-
-    .hero-btn:hover {
-      background: linear-gradient(135deg, #8a2519 0%, #6a1d12 100%);
-      color: white;
-      box-shadow: 0 8px 25px rgba(170, 47, 33, 0.4);
-      transform: translateY(-3px);
-      border-color: #ff6b6b;
-    }
-
-    .service-times {
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-
-    .service-time {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
-      margin: 1.5rem auto;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .service-time h3 {
-      color: #333;
-    }
-
-    .service-time p {
-      color: #333;
-    }
-
-    .contact {
-      background: #1e293b;
-      color: white;
-      text-align: center;
-    }
-
-    .contact h1 {
-      color: white;
-    }
-
-    .contact a {
-      color: #60a5fa;
-      display: block;
-      margin: 0.5rem 0;
-    }
-
-    .contact a:hover {
-      color: #93c5fd;
-    }
-
-    .welcome {
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-
-    .online-platforms {
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-
-    .online-platforms ul {
-      list-style: none;
-      max-width: 600px;
-      margin: 2rem auto;
-    }
-
-    .online-platforms li {
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.95);
-      margin: 0.75rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
-      color: #333;
-    }
-
-    .features {
-      text-align: center;
-      background: rgba(0, 0, 0, 0.6);
-    }
-
-    .row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 3rem;
-      margin-top: 2rem;
-    }
-
-    .feature-col {
-      text-align: center;
-    }
-
-    .feature-circle {
-      margin-bottom: 1rem;
-    }
-
-    .feature-circle img {
-      max-width: 200px;
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-    }
-
-    .about {
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-    }
-
-    .about p {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 1.5rem;
-    }
-
-    .announcements {
-      background: rgba(0, 0, 0, 0.7);
-      text-align: center;
-      padding: 3rem 1.5rem;
-    }
-
-    .announcement-box {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
-      margin: 1.5rem auto;
-      max-width: 700px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .announcement-box h3 {
-      color: #aa2f21;
-      margin-bottom: 1rem;
-    }
-
-    .announcement-box p {
-      color: #333;
-    }
-
-    .bible-verse {
-      background: rgba(0, 0, 0, 0.7);
-      text-align: center;
-      padding: 3rem 1.5rem;
-    }
-
-    .verse-box {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
-      margin: 1.5rem auto;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      font-style: italic;
-    }
-
-    .verse-box h3 {
-      color: #aa2f21;
-      font-style: normal;
-      margin-bottom: 1rem;
-    }
-
-    .verse-box p {
-      color: #333;
-    }
-
-    .zoom-info {
-      background: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 3rem 1.5rem;
-    }
-
-    .zoom-box {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
-      margin: 1.5rem auto;
-      max-width: 600px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .zoom-box h3 {
-      color: #aa2f21;
-    }
-
-    .zoom-box p {
-      color: #333;
-    }
-
-    /* Rounded corners + shadow for images */
-    .rounded-shadow {
-      border-radius: 0;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.35), 0 2px 6px rgba(0,0,0,0.08);
-      display: inline-block;
-      overflow: hidden;
-      max-width: 100%;
-      height: auto;
-    }
-
-    .zoom-box a {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 0.875rem 1.5rem;
-      border-radius: 8px;
-      margin-top: 1rem;
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-
-    .zoom-box a:hover {
-      background: #1d4ed8;
-      color: white;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
-    }
-
-    .info-highlight-link {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    .youtube-link {
-      color: #60a5fa;
-    }
-
-    .zoom-box p.meeting-info {
-      margin-top: 1rem;
-    }
-
-    footer {
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 3rem 1.5rem;
-    }
-
-    footer p {
-      margin: 0.75rem 0;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      color: white;
-    }
-
-    .footer-credit {
-      margin-top: 2rem;
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 2rem 1rem;
-      }
-
-      .top-header {
-        padding: 2rem 1rem;
-      }
-
-      .nav ul {
-        gap: 1rem;
-        font-size: 0.875rem;
-      }
-
-      .row {
-        gap: 2rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0a0908" />
+<title>Euclid Church of Christ — Welcome</title>
+<meta name="description" content="The Church of Christ in Euclid, OH. Worship, Bible study, sermons, online giving, and community at 635 East 250th St." />
+
+<meta property="og:title" content="Euclid Church of Christ" />
+<meta property="og:description" content="A loving and cheerful congregation in Euclid, Ohio. Join us in worship — in person or online." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://euclidcoc.org" />
+
+<link rel="icon" href="https://euclidcoc.org/images/ecocomain.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0a0908;
+    --bg-elev: #15110f;
+    --bg-card: #1a1513;
+    --bg-card-hover: #221b18;
+    --border: rgba(232, 181, 74, 0.12);
+    --border-strong: rgba(232, 181, 74, 0.28);
+    --burgundy: #7a1f2b;
+    --burgundy-glow: #a82a3a;
+    --gold: #e8b54a;
+    --gold-soft: #f0c569;
+    --cream: #f5e9d3;
+    --cream-mute: #c9bfae;
+    --text-mute: #8a8278;
+    --shadow: 0 18px 50px -12px rgba(0,0,0,0.6), 0 4px 12px -4px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--cream);
+    font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(168, 42, 58, 0.18), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 50% 8%, rgba(232, 181, 74, 0.10), transparent 70%),
+      var(--bg);
+    background-attachment: fixed;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.4 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode: overlay;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 32px 22px 110px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 24px 8px 32px;
+    animation: fadeUp 0.9s 0.05s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  }
+
+  .logo-mark {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-glow) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+      0 0 0 1px rgba(232, 181, 74, 0.2),
+      0 0 60px -8px rgba(168, 42, 58, 0.5),
+      inset 0 -4px 12px rgba(0,0,0,0.3),
+      inset 0 4px 12px rgba(255,255,255,0.08);
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 52px;
+    color: var(--gold);
+    line-height: 1;
+    font-style: italic;
+    letter-spacing: -2px;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .logo-mark:hover { transform: translateY(-3px) rotate(-3deg); }
+
+  .eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(34px, 8vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    margin-bottom: 16px;
+  }
+
+  h1 em {
+    display: block;
+    font-style: italic;
+    color: var(--gold);
+    font-weight: 400;
+    font-size: 0.55em;
+    margin-top: 6px;
+    letter-spacing: 0.01em;
+  }
+
+  .tagline {
+    font-size: 15px;
+    color: var(--cream-mute);
+    max-width: 380px;
+    margin: 0 auto 22px;
+    line-height: 1.55;
+  }
+
+  .verse {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-mute);
+    margin-top: 8px;
+    letter-spacing: 0.01em;
+  }
+
+  .announce {
+    background: linear-gradient(135deg, rgba(232, 181, 74, 0.10), rgba(232, 181, 74, 0.04));
+    border: 1px solid rgba(232, 181, 74, 0.25);
+    border-radius: 14px;
+    padding: 14px 16px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    animation: fadeUp 0.7s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  }
+
+  .announce-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    margin-top: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 0 4px rgba(232, 181, 74, 0.18);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(232, 181, 74, 0.18); }
+    50% { box-shadow: 0 0 0 8px rgba(232, 181, 74, 0.05); }
+  }
+
+  .announce-content { flex: 1; }
+
+  .announce-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .announce-text {
+    font-size: 13.5px;
+    color: var(--cream);
+    line-height: 1.5;
+  }
+
+  .events {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .event {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .event:hover {
+    border-color: var(--border-strong);
+    background: var(--bg-card-hover);
+  }
+
+  .event-date {
+    flex-shrink: 0;
+    width: 56px;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    padding-right: 16px;
+  }
+
+  .event-month {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .event-day {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--cream);
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .event-body { flex: 1; min-width: 0; }
+
+  .event-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cream);
+    line-height: 1.3;
+    margin-bottom: 3px;
+  }
+
+  .event-meta {
+    font-size: 12px;
+    color: var(--text-mute);
+    line-height: 1.35;
+  }
+
+  .times {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px 14px;
+    margin-bottom: 8px;
+  }
+
+  .time-block {
+    text-align: center;
+    padding: 4px 2px;
+  }
+
+  .time-block + .time-block {
+    border-left: 1px solid var(--border);
+  }
+
+  .time-day {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .time-event {
+    font-family: 'Fraunces', serif;
+    font-size: 13px;
+    color: var(--cream);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+
+  .time-hour {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--cream-mute);
+  }
+
+  .time-note {
+    display: block;
+    font-size: 10.5px;
+    color: var(--text-mute);
+    text-align: center;
+    margin: 10px 4px 0;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 32px 4px 14px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .section-label span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    color: var(--cream);
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(232, 181, 74, 0.04));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .card:hover, .card:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--border-strong);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow);
+  }
+
+  .card:hover::before, .card:focus-visible::before { opacity: 1; }
+
+  .card:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  .card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(122, 31, 43, 0.5), rgba(168, 42, 58, 0.3));
+    border: 1px solid rgba(232, 181, 74, 0.15);
+    color: var(--gold);
+  }
+
+  .card-icon svg { width: 22px; height: 22px; stroke: currentColor; }
+
+  .card-body { flex: 1; min-width: 0; }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cream);
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  .card-sub {
+    font-size: 12px;
+    color: var(--text-mute);
+    line-height: 1.35;
+  }
+
+  .card-arrow {
+    color: var(--text-mute);
+    flex-shrink: 0;
+    transition: transform 0.25s ease, color 0.25s ease;
+  }
+
+  .card:hover .card-arrow {
+    transform: translateX(3px);
+    color: var(--gold);
+  }
+
+  .card-primary {
+    background: linear-gradient(135deg, var(--burgundy) 0%, #5c1620 100%);
+    border-color: rgba(232, 181, 74, 0.3);
+  }
+
+  .card-primary .card-icon {
+    background: rgba(232, 181, 74, 0.15);
+    border-color: rgba(232, 181, 74, 0.35);
+  }
+
+  .card-primary .card-sub { color: rgba(245, 233, 211, 0.7); }
+  .card-primary:hover { border-color: var(--gold); }
+
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .grid-2 .card {
+    padding: 14px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .grid-2 .card-arrow { display: none; }
+  .grid-2 .card-icon { width: 36px; height: 36px; }
+  .grid-2 .card-icon svg { width: 18px; height: 18px; }
+
+  .about {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px 22px;
+    margin-top: 8px;
+  }
+
+  .about h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--cream);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .about p {
+    font-size: 14px;
+    color: var(--cream-mute);
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .about p:last-child { margin-bottom: 0; }
+
+  .about strong {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 44px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer-logo {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--gold);
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+  }
+
+  .addr {
+    font-size: 13px;
+    color: var(--cream-mute);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .addr a {
+    color: var(--cream-mute);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .addr a:hover { color: var(--gold); border-bottom-color: var(--gold); }
+  .addr-mute { color: var(--text-mute); font-size: 12px; }
+
+  .credit {
+    font-size: 10px;
+    color: var(--text-mute);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 18px;
+  }
+
+  .credit a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .credit a:hover { border-color: var(--gold); }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .events,
+  .actions .card,
+  .about,
+  .times,
+  footer {
+    animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  }
+
+  .events { animation-delay: 0.18s; }
+  .times { animation-delay: 0.25s; }
+  .actions .card:nth-child(1) { animation-delay: 0.30s; }
+  .actions .card:nth-child(2) { animation-delay: 0.34s; }
+  .actions .card:nth-child(3) { animation-delay: 0.38s; }
+  .actions .card:nth-child(4) { animation-delay: 0.42s; }
+  .actions .card:nth-child(5) { animation-delay: 0.46s; }
+  .grid-2 { animation: fadeUp 0.6s 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
+  .about { animation-delay: 0.55s; }
+  footer { animation-delay: 0.65s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; }
+  }
+</style>
+
 </head>
-
 <body>
-  <nav class="nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sermons.html">Sermons</a></li>
-      <li><a href="about.html">About Church of Christ</a></li>
-    </ul>
-  </nav>
 
-  <div class="contact-buttons">
-    <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
-    <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
-    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
+<main class="wrap">
+
+  <header class="hero">
+    <div class="logo-mark" aria-label="Euclid Church of Christ">E</div>
+    <h1>Church of Christ<em>at Euclid</em></h1>
+    <p class="tagline">A loving and cheerful congregation. We are delighted that you have taken the time to visit us today.</p>
+    <p class="verse">"But speak thou the things which become sound doctrine." — Titus 2:1</p>
+  </header>
+
+  <div class="announce" role="region" aria-label="Announcements">
+    <span class="announce-dot" aria-hidden="true"></span>
+    <div class="announce-content">
+      <div class="announce-label">Announcement</div>
+      <div class="announce-text">Welcome to all new members &amp; visitors — you are our very special guests. <strong style="color:var(--gold)">Friends &amp; Family Day is coming up May 31!</strong></div>
+    </div>
   </div>
 
-  <div class="svg-container">
-    <img src="images/ecocomain.png" alt="Euclid Church of Christ Logo" class="rounded-shadow" />
+  <div class="section-label"><span>Upcoming Events</span></div>
+  <div class="events">
+
+```
+<div class="event">
+  <div class="event-date">
+    <div class="event-month">May</div>
+    <div class="event-day">30</div>
+  </div>
+  <div class="event-body">
+    <div class="event-title">City of Euclid — 200th St Stroll</div>
+    <div class="event-meta">Community-wide event · Friday</div>
+  </div>
+</div>
+
+<div class="event">
+  <div class="event-date">
+    <div class="event-month">May</div>
+    <div class="event-day">31</div>
+  </div>
+  <div class="event-body">
+    <div class="event-title">Friends &amp; Family Day</div>
+    <div class="event-meta">All are welcome · Saturday at the church building</div>
+  </div>
+</div>
+```
+
   </div>
 
-  <div class="text-box">
-    <h1>The Church of Christ Welcomes You</h1>
-    <p>Located in Euclid, OH</p>
-    <p>We are delighted that you have taken the time to visit us today!</p>
-    <p>The Church of Christ in Euclid believes in the New Testament gospel, and follows the Examples and teachings of Jesus Christ.</p>
-    <p>The Church of Christ is apart of the 1 body. We continuously strive to study and preach sound doctrine. (Titus 2:1)</p>
-    <p>Every First day of the week - Congregation meets @ 635 E. 250th St, Euclid, OH for worship and fellowship in spirit and in truth.</p>
-    <p class="info-highlight">
-      <strong>For more information about the Church of Christ and how we worship, visit our <a href="about.html" class="info-highlight-link">About Us</a> page.</strong>
-    </p>
-    <a href="http://www.euclidcoc.org/" class="hero-btn">WWW.EUCLIDCOC.ORG</a>
+  <div class="section-label"><span>Service Times</span></div>
+  <div class="times" role="region" aria-label="Service times">
+    <div class="time-block">
+      <div class="time-day">Sunday</div>
+      <div class="time-event">Bible Class</div>
+      <div class="time-hour">10:00 AM</div>
+    </div>
+    <div class="time-block">
+      <div class="time-day">Sunday</div>
+      <div class="time-event">Worship</div>
+      <div class="time-hour">11:00 AM</div>
+    </div>
+    <div class="time-block">
+      <div class="time-day">Wednesday</div>
+      <div class="time-event">Song Practice<br/>&amp; Prayer</div>
+      <div class="time-hour">7:00 PM</div>
+    </div>
+  </div>
+  <p class="time-note">In person at 635 East 250th St &amp; live on YouTube · Wednesday Bible Study temporarily replaced by song practice and prayer · Sunday evening service on temporary hiatus</p>
+
+  <div class="section-label"><span>Connect Now</span></div>
+  <div class="actions">
+
+```
+<a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" class="card card-primary">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Online Giving</div>
+    <div class="card-sub">Support the work of the church</div>
+  </div>
+  <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+</a>
+
+<a href="https://www.youtube.com/@euclidchurchofchrist/live" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Watch Sunday Service Live</div>
+    <div class="card-sub">YouTube livestream · Sundays at 11 AM</div>
+  </div>
+  <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+</a>
+
+<a href="https://cwru.zoom.us/j/91317392459?pwd=Z1NuVGJLY3R4cGlwMzN1ZE4rbzNsQT09" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Wednesday Night on Zoom</div>
+    <div class="card-sub">Meeting ID 913 1739 2459 · Passcode 481921</div>
+  </div>
+  <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+</a>
+
+<a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Visitor / Member Connect</div>
+    <div class="card-sub">Tell us you stopped by — we'd love to meet you</div>
+  </div>
+  <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+</a>
+
+<a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Lessons &amp; Sermons Archive</div>
+    <div class="card-sub">Watch past services anytime</div>
+  </div>
+  <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+</a>
+```
+
   </div>
 
-  <section class="service-times">
-    <h1>Service Times</h1>
-    <div class="service-time">
-      <h3>Sundays</h3>
-      <p><strong>Bible Study:</strong> @ 10AM</p>
-      <p><strong>Worship:</strong> @ 11AM</p>
-      <p>(In Person & Live on YouTube)</p>
-    </div>
-    <div class="service-time">
-      <h3>Wednesdays</h3>
-      <p><strong>Bible Study:</strong> @ 7PM</p>
-      <p>(In Person & on Zoom)</p>
-    </div>
-  </section>
+  <div class="section-label"><span>Stay Connected</span></div>
+  <div class="grid-2">
+    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" class="card">
+      <div class="card-icon" aria-hidden="true">
+        <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Facebook</div>
+        <div class="card-sub">Church of Christ — Euclid</div>
+      </div>
+    </a>
 
-  <section class="online-platforms">
-    <h1>1st Time Visitor & Members</h1>
-    <h2>Euclid COC's Online Platforms</h2>
-    <p>We strive to keep a loving environment; one where members of the body can worship and participate with us from home, praising and giving all glory to God!</p>
-    <p><strong>Click the red checkmark (bottom right corner of this page)</strong></p>
-    <ul>
-      <li><a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" target="_blank" rel="noopener noreferrer">Member Visitor Connect Form</a></li>
-      <li><a href="https://www.youtube.com/@euclidchurchofchrist" target="_blank" rel="noopener noreferrer">YouTube Live Streams & Sermons</a></li>
-      <li><a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" target="_blank" rel="noopener noreferrer">Online Giving</a></li>
-      <li>Weekly Bible Study Class via Zoom</li>
-      <li><a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook Page</a></li>
-    </ul>
-  </section>
+```
+<a href="https://www.youtube.com/@euclidchurchofchrist" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">YouTube</div>
+    <div class="card-sub">@euclidchurchofchrist</div>
+  </div>
+</a>
 
-  <section class="announcements">
-    <h1>Announcements</h1>
-    <div class="announcement-box">
-      <h3>Welcome to All New Members and Visitors!</h3>
-      <p>You are our very special guests</p>
-      <p><strong>Friends & Family Day Coming Soon!</strong></p>
-    </div>
-  </section>
+<a href="tel:+12162616505" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Call Us</div>
+    <div class="card-sub">216-261-6505</div>
+  </div>
+</a>
 
-  <section class="bible-verse">
-    <h1>Scripture</h1>
-    <div class="verse-box">
-      <h3>2 Timothy Chapter 3: Verses 16 & 17</h3>
-      <p><strong>16.)</strong> All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:</p>
-      <p><strong>17.)</strong> That the man of God may be perfect, throughly furnished unto all good works.</p>
-    </div>
-    <div class="verse-box">
-      <h3>Titus 2 Verses 1 & 2</h3>
-      <p><strong>(1).</strong> But speak thou the things which become sound doctrine:</p>
-      <p><strong>(2).</strong> That the aged men be sober, grave, temperate, sound in faith, in charity, in patience.</p>
-    </div>
-  </section>
+<a href="mailto:euclidcoc@gmail.com" class="card">
+  <div class="card-icon" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </div>
+  <div class="card-body">
+    <div class="card-title">Email</div>
+    <div class="card-sub">euclidcoc@gmail.com</div>
+  </div>
+</a>
+```
 
-  <section class="zoom-info">
-    <h1>Wednesday Night Bible Study</h1>
-    <div class="zoom-box">
-      <h3>Join Us on Zoom</h3>
-      <p>For those who cannot make the trip to the building, please join on ZOOM!</p>
-      <p><strong>Every Wednesday @ 7pm EST</strong></p>
-      <p>At the church building:<br>635 EAST 250th St, Euclid, OH, 44132</p>
-      <a href="https://cwru.zoom.us/j/91317392459?pwd=Z1NuVGJLY3R4cGlwMzN1ZE4rbzNsQT09" target="_blank" rel="noopener noreferrer">Join Wednesday Night Bible Study</a>
-      <p class="meeting-info"><strong>Meeting ID:</strong> 913 1739 2459</p>
-      <p><strong>Passcode:</strong> 481921</p>
-    </div>
-  </section>
+  </div>
 
+  <div class="section-label"><span>Who We Are</span></div>
   <section class="about">
-    <h1>Sunday Worship Service</h1>
-    <p>We worship in person every Sunday @ 11am.</p>
-    <p>We also <a href="https://www.youtube.com/watch?v=H6CifUmHyPc" target="_blank" rel="noopener noreferrer" class="youtube-link">stream live on YouTube</a> for those at home or out of town.</p>
-    <p>We are a loving and cheerful congregation here at the Euclid Church of Christ.</p>
-    <p>This website includes info about our services, events and includes resources for more information about the Church of Christ.</p>
-    <p>We believe in preaching and teaching from the Bible, the inspired word of God.</p>
-  </section>
-
-  <section class="features">
-    <h1>About the Church of Christ</h1>
-    <p>The Euclid Church of Christ is a congregation of Christians striving to serve God according to the pattern of the New Testament. We believe that the Bible is the inspired Word of God and our only guide in religious matters. We have no human creed or denominational ties. Our goal is to simply be Christians, nothing more and nothing less.</p>
-    <p>Our worship services are designed to follow the simple and meaningful pattern revealed in the New Testament. We pray, sing, partake of the Lord's Supper, give as we have been prospered, and hear the Word of God proclaimed. We invite you to visit us and learn more about the Church of Christ.</p>
+    <h3>The Church of Christ welcomes you.</h3>
+    <p>The Euclid Church of Christ is a congregation of Christians striving to serve God according to the pattern of the New Testament. We believe the Bible is the inspired Word of God and our only guide in religious matters. <strong>No human creed, no denominational ties</strong> — our goal is to simply be Christians, nothing more and nothing less.</p>
+    <p>Our worship follows the simple, meaningful pattern of the New Testament: we pray, sing, partake of the Lord's Supper, give as we have been prospered, and hear the Word of God proclaimed.</p>
+    <p>Every first day of the week we meet at <strong>635 East 250th St, Euclid, OH</strong> for worship and fellowship in spirit and in truth.</p>
   </section>
 
   <footer>
-    <p>If you have any questions or would like info on placing membership with us, please don't hesitate to reach out!</p>
-    <p>Come visit us in person!</p>
-    <p><strong>635 EAST 250th St, Euclid, OH, 44132</strong></p>
-    <p>Email: euclidcoc@gmail.com | Office: 216-261-6501</p>
-    <p>Bookmark www.euclidcoc.org</p>
-    <p class="footer-credit">Website Developed by Acefluento.</p>
+    <div class="footer-logo">euclidcoc.org</div>
+    <div class="addr">
+      <a href="https://maps.google.com/?q=635+East+250th+St+Euclid+OH+44132" target="_blank" rel="noopener">
+        635 East 250th St<br />
+        Euclid, OH 44132
+      </a>
+      <div class="addr-mute" style="margin-top:8px">
+        216-261-6505 · euclidcoc@gmail.com
+      </div>
+    </div>
+    <div class="credit">
+      Crafted by <a href="https://acefluento.com" target="_blank" rel="noopener">Acefluento</a>
+    </div>
   </footer>
-</body>
 
+</main>
+
+<!-- Nucleus Launcher Widget -->
+
+<script>
+  window.nucleusLauncherSettings = {
+    launcherId: '44c0ab401da5476a1636',
+  };
+  (function (l, a, u, n, c, h) {
+    u = a.createElement('script');
+    u.type = 'text/javascript';
+    u.async = true;
+    u.src = 'https://launcher.nucleus.church/boot.latest.js';
+    n = a.getElementsByTagName('script')[0];
+    n.parentNode.insertBefore(u, n);
+  })(window, document);
+</script>
+
+</body>
 </html>
