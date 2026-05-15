@@ -85,13 +85,13 @@
   }
 
   .logo-mark {
-    width: 190px;
+    width: 220px;
     height: auto;
     margin: 0 auto 28px;
     display: block;
-    /* mask clips the light background so only the oval badge is visible */
-    -webkit-mask-image: radial-gradient(ellipse 46% 44% at 50% 54%, black 70%, transparent 85%);
-    mask-image: radial-gradient(ellipse 46% 44% at 50% 54%, black 70%, transparent 85%);
+    /* mask clips the light background — ellipse sized to badge, sharp fade */
+    -webkit-mask-image: radial-gradient(ellipse 50% 47% at 50% 55%, black 78%, transparent 92%);
+    mask-image: radial-gradient(ellipse 50% 47% at 50% 55%, black 78%, transparent 92%);
     filter:
       drop-shadow(0 0 28px rgba(168, 42, 58, 0.55))
       drop-shadow(0 6px 18px rgba(0,0,0,0.6));
