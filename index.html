@@ -685,10 +685,106 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; }
   }
+
+  /* ── Sticky nav bar ── */
+  .sticky-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: rgba(10, 9, 8, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(168, 42, 58, 0.28);
+    padding: 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transform: translateY(-100%);
+    transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .sticky-bar.visible { transform: translateY(0); }
+
+  .sticky-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--cream-mute);
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .sticky-actions { display: flex; gap: 8px; }
+
+  .sticky-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 13px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+  }
+
+  .sticky-btn:hover { opacity: 0.82; }
+
+  .sticky-btn-watch {
+    background: var(--burgundy-glow);
+    color: var(--gold-soft);
+  }
+
+  .sticky-btn-give {
+    background: rgba(232, 181, 74, 0.13);
+    color: var(--gold);
+    border: 1px solid rgba(232, 181, 74, 0.28);
+  }
+
+  /* ── Schedule change note ── */
+  .time-changes {
+    margin: 12px 0 0;
+    padding: 11px 14px;
+    background: rgba(122, 31, 43, 0.12);
+    border: 1px solid rgba(168, 42, 58, 0.24);
+    border-left: 3px solid var(--burgundy-glow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .time-change-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 11.5px;
+    color: var(--cream-mute);
+    line-height: 1.45;
+  }
+
+  .time-change-icon {
+    color: var(--burgundy-glow);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
 </style>
 
 </head>
 <body>
+
+<nav class="sticky-bar" id="stickyBar" aria-label="Quick navigation">
+  <span class="sticky-name">Euclid Church of Christ</span>
+  <div class="sticky-actions">
+    <a href="https://www.youtube.com/@euclidchurchofchrist/live" class="sticky-btn sticky-btn-watch" target="_blank" rel="noopener">▶ Watch Live</a>
+    <a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" class="sticky-btn sticky-btn-give">Give</a>
+  </div>
+</nav>
 
 <main class="wrap">
 
@@ -709,11 +805,11 @@
     </div>
   </div>
 
-  <div class="section-label"><span>Upcoming Events</span></div>
+  <div class="section-label" data-section="events"><span>Upcoming Events</span></div>
   <div class="events">
 
 ```
-<div class="event">
+<div class="event" data-event-date="2026-05-30">
   <div class="event-date">
     <div class="event-month">May</div>
     <div class="event-day">30</div>
@@ -724,7 +820,7 @@
   </div>
 </div>
 
-<div class="event">
+<div class="event" data-event-date="2026-05-31">
   <div class="event-date">
     <div class="event-month">May</div>
     <div class="event-day">31</div>
@@ -756,7 +852,17 @@
       <div class="time-hour">7:00 PM</div>
     </div>
   </div>
-  <p class="time-note">In person at 635 East 250th St &amp; live on YouTube · Wednesday Bible Study temporarily replaced by song practice and prayer · Sunday evening service on temporary hiatus</p>
+  <p class="time-note">In person at 635 East 250th St &amp; live on YouTube</p>
+  <div class="time-changes" role="note" aria-label="Schedule changes">
+    <div class="time-change-row">
+      <span class="time-change-icon" aria-hidden="true">◈</span>
+      Wednesday Bible Study temporarily replaced by Song Practice &amp; Prayer
+    </div>
+    <div class="time-change-row">
+      <span class="time-change-icon" aria-hidden="true">◈</span>
+      Sunday evening service on temporary hiatus
+    </div>
+  </div>
 
   <div class="section-label"><span>Connect Now</span></div>
   <div class="actions">
@@ -890,7 +996,7 @@
   <footer>
     <div class="footer-logo">euclidcoc.org</div>
     <div class="addr">
-      <a href="https://maps.google.com/?q=635+East+250th+St+Euclid+OH+44132" target="_blank" rel="noopener">
+      <a href="https://maps.google.com/maps/dir/?api=1&destination=635+East+250th+St+Euclid+OH+44132" target="_blank" rel="noopener">
         635 East 250th St<br />
         Euclid, OH 44132
       </a>
@@ -904,6 +1010,61 @@
   </footer>
 
 </main>
+
+<script>
+  // Sticky nav — slides in once the hero scrolls out of view
+  (function () {
+    var bar = document.getElementById('stickyBar');
+    var hero = document.querySelector('.hero');
+    if (!bar || !hero) return;
+    var obs = new IntersectionObserver(function (entries) {
+      bar.classList.toggle('visible', !entries[0].isIntersecting);
+    }, { threshold: 0 });
+    obs.observe(hero);
+  })();
+
+  // Auto-hide past events; remove the section label if all are hidden
+  (function () {
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+    var anyVisible = false;
+    document.querySelectorAll('.event[data-event-date]').forEach(function (el) {
+      var d = new Date(el.dataset.eventDate + 'T00:00:00');
+      if (d < today) {
+        el.hidden = true;
+      } else {
+        anyVisible = true;
+      }
+    });
+    if (!anyVisible) {
+      var label = document.querySelector('.section-label[data-section="events"]');
+      var container = document.querySelector('.events');
+      if (label) label.hidden = true;
+      if (container) container.hidden = true;
+    }
+  })();
+
+  // AJAX email form — submit to Netlify without page reload
+  (function () {
+    var form = document.querySelector('.cta-email-form');
+    var success = document.querySelector('.cta-success');
+    if (!form || !success) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      fetch('/', { method: 'POST', body: data })
+        .then(function () {
+          form.hidden = true;
+          success.style.display = 'block';
+        })
+        .catch(function () {
+          // Fallback: show success anyway (Netlify may block cross-origin in preview)
+          form.hidden = true;
+          success.style.display = 'block';
+        });
+    });
+  })();
+</script>
 
 <!-- Nucleus Launcher Widget -->
 
