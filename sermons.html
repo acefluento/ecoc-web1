@@ -1,410 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sermons - Euclid Church of Christ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    window.nucleusLauncherSettings = {
-      launcherId: '44c0ab401da5476a1636',
-    };
-    (function (l, a, u, n, c, h) {
-      u = a.createElement('script');
-      u.type = 'text/javascript';
-      u.async = true;
-      u.src = 'https://launcher.nucleus.church/boot.latest.js';
-      n = a.getElementsByTagName('script')[0];
-      n.parentNode.insertBefore(u, n);
-    })(window, document);
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0908" />
+  <title>Sermons — Euclid Church of Christ</title>
+  <link rel="icon" href="images/IMG_4982.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg: #0a0908;
+      --bg-elev: #15110f;
+      --bg-card: #1a1513;
+      --border: rgba(232,181,74,0.12);
+      --border-strong: rgba(232,181,74,0.28);
+      --burgundy: #7a1f2b;
+      --burgundy-glow: #a82a3a;
+      --gold: #e8b54a;
+      --gold-soft: #f0c569;
+      --cream: #f5e9d3;
+      --cream-mute: #c9bfae;
+      --text-mute: #8a8278;
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
       line-height: 1.6;
-      color: #333;
-      font-size: 16px;
-      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.6)), url(images/ecoc-banner2.png);
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      min-height: 100vh;
+      min-height: 100dvh;
     }
 
-    h1 {
-      font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-      color: #f1f1f1;
-    }
-
-    h2 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 600;
-      margin-bottom: 0.875rem;
-      color: #f1f1f1;
-    }
-
-    h3 {
-      font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      color: #f1f1f1;
-    }
-
-    p {
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
-      margin-bottom: 1rem;
-      line-height: 1.7;
-      color: #f1f1f1;
-    }
-
-    a {
-      color: #aa2f21;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    a:hover {
-      color: #8a2519;
-    }
-
-    .nav {
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
+    /* ── Nav ── */
+    .site-nav {
       position: sticky;
       top: 0;
       z-index: 100;
-    }
-
-    .nav ul {
-      list-style: none;
+      background: rgba(10,9,8,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(168,42,58,0.28);
+      padding: 12px 20px;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
-
-    .nav a {
-      font-weight: 500;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #aa2f21;
-    }
-
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      padding: 1.5rem 1rem;
-      background: #f9fafb;
-      border-bottom: 2px solid #e5e7eb;
+      justify-content: space-between;
+      gap: 16px;
     }
 
-    .contact-btn {
-      display: inline-block;
-      padding: 0.875rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      transition: all 0.3s;
+    .site-nav-brand {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
       text-decoration: none;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .phone-btn {
-      background: #aa2f21;
-      color: white;
+    .site-nav-links {
+      display: flex;
+      gap: 6px;
     }
 
-    .phone-btn:hover {
-      background: #8a2519;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    .site-nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--cream-mute);
+      text-decoration: none;
+      padding: 6px 11px;
+      border-radius: 7px;
+      transition: background 0.2s, color 0.2s;
     }
 
-    .email-btn {
-      background: #059669;
-      color: white;
-    }
+    .site-nav-links a:hover,
+    .site-nav-links a.active { background: rgba(168,42,58,0.2); color: var(--cream); }
 
-    .email-btn:hover {
-      background: #047857;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-
-    .facebook-btn {
-      background: #1877f2;
-      color: white;
-    }
-
-    .facebook-btn:hover {
-      background: #0c63d4;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-
-    .page-header {
+    /* ── Page hero ── */
+    .page-hero {
       text-align: center;
-      padding: 3rem 1.5rem 2rem;
-      background: rgba(0, 0, 0, 0.7);
+      padding: 52px 24px 40px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .page-header h1 {
-      color: #f1f1f1;
-      margin-bottom: 0.5rem;
+    .page-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 6vw, 38px);
+      letter-spacing: -0.02em;
+      color: var(--burgundy-glow);
+      margin-bottom: 10px;
     }
 
-    .page-header p {
-      color: #f1f1f1;
-      max-width: 700px;
+    .page-hero p {
+      font-size: 15px;
+      color: var(--cream-mute);
+      max-width: 520px;
       margin: 0 auto;
     }
 
-    section {
-      padding: 3rem 1.5rem;
-    }
-
-    .sermon-section {
-      background: rgba(0, 0, 0, 0.7);
-      text-align: center;
-      max-width: 1200px;
+    /* ── Content ── */
+    .content-wrap {
+      max-width: 760px;
       margin: 0 auto;
+      padding: 36px 22px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
     }
 
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin: 2rem auto;
-      max-width: 1200px;
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
     }
 
-    .video-card {
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 12px;
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(232,181,74,0.18), transparent);
+    }
+
+    .section-label span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .section-label span::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    /* ── Live card ── */
+    .live-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-top: 2px solid rgba(232, 181, 74, 0.35);
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
     }
 
-    .video-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    .live-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+    }
+
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--burgundy-glow);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .live-card-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cream-mute);
     }
 
     .video-wrapper {
       position: relative;
       width: 100%;
       padding-top: 56.25%;
-      overflow: hidden;
       background: #000;
     }
 
     .video-wrapper iframe {
       position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
       border: none;
     }
 
+    .live-card-footer {
+      padding: 14px 18px;
+    }
+
+    .yt-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--burgundy-glow);
+      color: var(--cream);
+      padding: 10px 18px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .yt-link:hover { background: #c0314a; }
+
+    .yt-link-outline {
+      background: transparent;
+      color: var(--cream-mute);
+      border: 1px solid var(--border-strong);
+    }
+
+    .yt-link-outline:hover { background: rgba(232,181,74,0.08); color: var(--cream); }
+
+    /* ── Video grid ── */
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .video-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .video-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+    }
+
     .video-info {
-      padding: 1.5rem;
-      text-align: left;
+      padding: 14px 16px;
     }
 
     .video-info h3 {
-      color: #aa2f21;
-      font-size: clamp(1.125rem, 2vw, 1.25rem);
-      margin-bottom: 0.5rem;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 5px;
+      letter-spacing: -0.01em;
     }
 
     .video-info p {
-      color: #333;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      margin-bottom: 1rem;
+      font-size: 12.5px;
+      color: var(--text-mute);
+      margin-bottom: 12px;
+      line-height: 1.5;
     }
 
-    .watch-btn {
-      display: inline-block;
-      background: #aa2f21;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      transition: all 0.3s;
-    }
-
-    .watch-btn:hover {
-      background: #8a2519;
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    .channel-link {
-      display: inline-block;
-      background: #aa2f21;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      margin-top: 2rem;
-      font-size: clamp(1rem, 1.5vw, 1.125rem);
-      transition: all 0.3s;
-    }
-
-    .channel-link:hover {
-      background: #8a2519;
-      color: white;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .video-placeholder {
-      background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%);
-      display: flex;
+    .video-info a {
+      display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
     }
 
-    .video-placeholder.featured {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    }
+    .video-info a:hover { border-color: var(--gold); }
 
-    .video-placeholder.archive {
-      background: linear-gradient(135deg, #1877f2 0%, #0c63d4 100%);
-    }
-
-    .placeholder-text {
-      color: white;
-      font-weight: 600;
-      padding: 2rem;
+    .archive-row {
       text-align: center;
+      padding-top: 8px;
     }
 
+    /* ── Footer ── */
     footer {
-      background: #0f172a;
-      color: white;
+      background: var(--bg-elev);
+      border-top: 1px solid var(--border);
       text-align: center;
-      padding: 3rem 1.5rem;
+      padding: 32px 20px;
+      font-size: 12.5px;
+      color: var(--text-mute);
+      line-height: 1.7;
     }
 
-    footer p {
-      margin: 0.75rem 0;
-      font-size: clamp(0.875rem, 1.5vw, 1rem);
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 2rem 1rem;
-      }
-
-      .nav ul {
-        gap: 1rem;
-      }
-
-      .video-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-    }
+    footer strong { color: var(--cream-mute); }
+    footer a { color: var(--gold); text-decoration: none; }
   </style>
 </head>
-
 <body>
-  <nav class="nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sermons.html">Sermons</a></li>
-      <li><a href="about.html">About Church of Christ</a></li>
-    </ul>
-  </nav>
 
-  <div class="contact-buttons">
-    <a href="tel:+12162616505" class="contact-btn phone-btn">📞 Call: 216-261-6505</a>
-    <a href="mailto:euclidcoc@gmail.com" class="contact-btn email-btn">✉️ Email Us</a>
-    <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="contact-btn facebook-btn">👍 Visit Our Facebook</a>
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="index.html" class="site-nav-brand">Euclid CoC</a>
+  <div class="site-nav-links">
+    <a href="index.html">Home</a>
+    <a href="sermons.html" class="active">Sermons</a>
+    <a href="about.html">About</a>
   </div>
+</nav>
 
-  <div class="page-header">
-    <h1>Sermons & Messages</h1>
-    <p>Watch our recent sermons and Bible study messages. Join us every Sunday at 11am for live worship service.</p>
-  </div>
+<div class="page-hero">
+  <h1>Sermons &amp; Messages</h1>
+  <p>Watch our recent services and Bible study messages. Join us live every Sunday at 11 AM.</p>
+</div>
 
-  <section class="sermon-section">
-    <h2>Recent Sermons & Live Streams</h2>
-    <p>Browse through our recent messages from God's Word.</p>
+<div class="content-wrap">
 
-   <div class="video-grid">
-
-  <!-- MAIN RECENT STREAMS PLAYLIST -->
-  <div class="video-card">
-    <div class="video-wrapper video-placeholder">
-      <p class="placeholder-text">Video Placeholder</p>
-    </div>
-    <div class="video-info">
-      <h3>Recent Live Streams & Sermons</h3>
-      <p>Watch our most recent services and messages. Join us for inspiring teachings about God's Word and spiritual growth through our community.</p>
-    </div>
-  </div>
-
-  <!-- FILLER PLACEHOLDER 1 -->
-  <div class="video-card">
-    <div class="video-wrapper video-placeholder featured">
-      <p class="placeholder-text">Video Placeholder</p>
-    </div>
-    <div class="video-info">
-      <h3>Featured Sermon</h3>
-      <p>A highlighted message from our ministry. Discover powerful teachings focused on practical application of biblical principles to strengthen your faith and relationship with God.</p>
+  <div>
+    <div class="section-label"><span>Watch Live</span></div>
+    <div class="live-card">
+      <div class="live-card-header">
+        <span class="live-badge">● Live</span>
+        <span class="live-card-title">Sundays · 11:00 AM</span>
+      </div>
+      <div class="video-wrapper">
+        <!-- Replace UCEuclidChurchOfChrist with your real Channel ID from YouTube Studio → Settings → Channel → Advanced -->
+        <iframe
+          src="https://www.youtube.com/embed/live_stream?channel=UCEuclidChurchOfChrist"
+          title="Euclid Church of Christ — Live Worship"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+      <div class="live-card-footer">
+        <a href="https://www.youtube.com/@euclidchurchofchrist/live" class="yt-link" target="_blank" rel="noopener">
+          ▶ Open Live Stream on YouTube
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- FILLER PLACEHOLDER 2 -->
-  <div class="video-card">
-    <div class="video-wrapper video-placeholder archive">
-      <p class="placeholder-text">Video Placeholder</p>
+  <div>
+    <div class="section-label"><span>Sermon Library</span></div>
+    <div class="video-grid">
+
+      <!-- Replace VIDEO_ID_1/2/3 with actual YouTube video IDs from the channel -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0"
+            title="Recent Sunday Service" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Recent Sunday Service</h3>
+          <p>Our most recent worship service — join us as we study God's Word together.</p>
+          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0"
+            title="Sunday Worship Service" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Sunday Worship Service</h3>
+          <p>Hear the Word of God proclaimed in our Sunday morning worship.</p>
+          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0"
+            title="Bible Study Message" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Bible Study Message</h3>
+          <p>An in-depth study designed to deepen your understanding of Scripture.</p>
+          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+        </div>
+      </div>
+
     </div>
-    <div class="video-info">
-      <h3>Bible Study Archive</h3>
-      <p>Teachings and midweek studies designed to deepen your understanding of Scripture. Explore in-depth discussions on topics that strengthen your spiritual journey and biblical literacy.</p>
+    <div class="archive-row" style="margin-top:20px">
+      <a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="yt-link yt-link-outline" target="_blank" rel="noopener">
+        View Full Archive on YouTube ↗
+      </a>
     </div>
   </div>
 
 </div>
 
-  </section>
+<footer>
+  <p><strong>635 East 250th St, Euclid, OH 44132</strong></p>
+  <p>216-261-6505 · euclidcoc@gmail.com</p>
+  <p style="margin-top:12px">Crafted by <a href="https://acefluento.com" target="_blank" rel="noopener">Acefluento</a></p>
+</footer>
 
-  <footer>
-    <p>If you have any questions or would like info on placing membership with us, please don't hesitate to reach out!</p>
-    <p>Come visit us in person!</p>
-    <p><strong>635 EAST 250th St, Euclid, OH, 44132</strong></p>
-    <p>Email: euclidcoc@gmail.com | Office: 216-261-6501</p>
-    <p>Bookmark www.euclidcoc.org</p>
-    <p style="margin-top: 2rem;">Website Developed by Acefluento.</p>
-  </footer>
+<script>
+  window.nucleusLauncherSettings = { launcherId: '44c0ab401da5476a1636' };
+  (function(l,a,u,n,c,h){u=a.createElement('script');u.type='text/javascript';u.async=true;u.src='https://launcher.nucleus.church/boot.latest.js';n=a.getElementsByTagName('script')[0];n.parentNode.insertBefore(u,n)})(window,document);
+</script>
 </body>
-
 </html>
