@@ -152,7 +152,8 @@
     font-size: clamp(32px, 8vw, 42px);
     line-height: 1.08;
     letter-spacing: -0.02em;
-    color: var(--cream);
+    color: var(--burgundy-glow);
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.8);
     margin-bottom: 16px;
   }
 
@@ -166,6 +167,7 @@
     margin-top: 6px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    text-shadow: none;
   }
 
   .tagline {
@@ -480,18 +482,22 @@
   }
 
   .card-primary {
-    background: var(--bg-card);
-    border-color: rgba(232, 181, 74, 0.22);
-    border-left: 3px solid rgba(232, 181, 74, 0.55);
+    background: linear-gradient(135deg, var(--burgundy) 0%, #5c1620 100%);
+    border-color: rgba(255, 255, 255, 0.10);
   }
+
+  .card-primary .card-title { color: var(--cream); }
+  .card-primary .card-sub { color: rgba(245, 233, 211, 0.60); }
 
   .card-primary .card-icon {
-    background: rgba(232, 181, 74, 0.08);
-    border-color: rgba(232, 181, 74, 0.20);
+    background: rgba(0, 0, 0, 0.28);
+    border-color: rgba(255, 255, 255, 0.14);
+    color: var(--cream);
   }
 
-  .card-primary .card-sub { color: var(--text-mute); }
-  .card-primary:hover { border-color: rgba(232, 181, 74, 0.42); }
+  .card-primary .card-arrow { color: rgba(245, 233, 211, 0.55); }
+  .card-primary:hover { border-color: rgba(255, 255, 255, 0.20); }
+  .card-primary:hover .card-arrow { color: var(--cream); }
 
   .grid-2 {
     display: grid;
@@ -671,7 +677,7 @@
 
   .cta-email-form button {
     background: var(--burgundy-glow);
-    color: var(--gold-soft);
+    color: var(--cream);
     border: none;
     border-radius: 10px;
     padding: 12px 18px;
@@ -754,7 +760,7 @@
 
   .sticky-btn-watch {
     background: var(--burgundy-glow);
-    color: var(--gold-soft);
+    color: var(--cream);
   }
 
   .sticky-btn-give {
