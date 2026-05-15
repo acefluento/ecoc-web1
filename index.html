@@ -75,13 +75,35 @@
     z-index: 1;
     max-width: 540px;
     margin: 0 auto;
-    padding: 32px 22px 110px;
+    padding: 20px 22px 110px;
   }
 
   .hero {
-    text-align: center;
-    padding: 24px 8px 32px;
+    position: relative;
+    overflow: hidden;
+    background: url('images/ecoc-banner2.png') center 40% / cover no-repeat;
     animation: fadeUp 0.9s 0.05s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(10, 9, 8, 0.82) 0%,
+      rgba(10, 9, 8, 0.60) 45%,
+      rgba(10, 9, 8, 0.82) 100%
+    );
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 60px 24px 52px;
   }
 
   .logo-wrap {
@@ -789,16 +811,18 @@
   </div>
 </nav>
 
-<main class="wrap">
-
-  <header class="hero">
+<header class="hero">
+  <div class="hero-inner">
     <div class="logo-wrap">
       <img class="logo-mark" src="images/IMG_4982.png" alt="Euclid Church of Christ" />
     </div>
     <h1>Church of Christ<em>@EUCLID</em></h1>
     <p class="tagline">A loving and cheerful congregation. We are delighted that you have taken the time to visit us today.</p>
     <p class="verse">"But speak thou the things which become sound doctrine." — Titus 2:1</p>
-  </header>
+  </div>
+</header>
+
+<main class="wrap">
 
   <div class="announce" role="region" aria-label="Announcements">
     <span class="announce-dot" aria-hidden="true"></span>
