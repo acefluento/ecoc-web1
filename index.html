@@ -148,13 +148,18 @@
     font-style: italic;
     font-size: 13px;
     color: var(--text-mute);
-    margin-top: 8px;
+    margin: 12px auto 0;
+    max-width: 340px;
     letter-spacing: 0.01em;
+    border-left: 2px solid rgba(168, 42, 58, 0.55);
+    padding-left: 12px;
+    text-align: left;
   }
 
   .announce {
-    background: linear-gradient(135deg, rgba(232, 181, 74, 0.10), rgba(232, 181, 74, 0.04));
-    border: 1px solid rgba(232, 181, 74, 0.25);
+    background: linear-gradient(135deg, rgba(122, 31, 43, 0.22), rgba(122, 31, 43, 0.07));
+    border: 1px solid rgba(168, 42, 58, 0.28);
+    border-left: 3px solid var(--burgundy-glow);
     border-radius: 14px;
     padding: 14px 16px;
     margin-bottom: 28px;
@@ -224,8 +229,12 @@
     flex-shrink: 0;
     width: 56px;
     text-align: center;
-    border-right: 1px solid var(--border);
+    border-right: 1px solid rgba(168, 42, 58, 0.22);
     padding-right: 16px;
+    background: linear-gradient(180deg, rgba(122, 31, 43, 0.18) 0%, rgba(122, 31, 43, 0.06) 100%);
+    border-radius: 8px 0 0 8px;
+    margin: -14px 0 -14px -16px;
+    padding: 14px 16px 14px 16px;
   }
 
   .event-month {
@@ -269,9 +278,11 @@
     gap: 8px;
     background: var(--bg-elev);
     border: 1px solid var(--border);
+    border-top: 2px solid var(--burgundy);
     border-radius: 16px;
     padding: 18px 14px;
     margin-bottom: 8px;
+    box-shadow: 0 -2px 16px -6px rgba(168, 42, 58, 0.25);
   }
 
   .time-block {
@@ -328,15 +339,28 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: var(--border);
+    background: linear-gradient(to right, rgba(168, 42, 58, 0.30), var(--border));
   }
 
   .section-label span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.28em;
     color: var(--gold);
     text-transform: uppercase;
+  }
+
+  .section-label span::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--burgundy-glow);
+    flex-shrink: 0;
+    box-shadow: 0 0 8px rgba(168, 42, 58, 0.6);
   }
 
   .actions {
