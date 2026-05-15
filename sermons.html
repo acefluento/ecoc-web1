@@ -282,26 +282,23 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    .video-placeholder {
-      background: linear-gradient(135deg, #aa2f21 0%, #8a2519 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .video-placeholder.featured {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
-    }
-
-    .video-placeholder.archive {
-      background: linear-gradient(135deg, #1877f2 0%, #0c63d4 100%);
-    }
-
-    .placeholder-text {
-      color: white;
-      font-weight: 600;
-      padding: 2rem;
+    .live-card {
+      max-width: 700px;
+      margin: 2rem auto 0;
       text-align: center;
+    }
+
+    .live-badge {
+      display: inline-block;
+      background: #aa2f21;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
     }
 
     footer {
@@ -354,47 +351,96 @@
     <p>Watch our recent sermons and Bible study messages. Join us every Sunday at 11am for live worship service.</p>
   </div>
 
+  <!-- LIVE STREAM SECTION -->
   <section class="sermon-section">
-    <h2>Recent Sermons & Live Streams</h2>
-    <p>Browse through our recent messages from God's Word.</p>
+    <h2>Watch Live</h2>
+    <p>Join us every Sunday at 11 AM for live worship service on YouTube.</p>
 
-   <div class="video-grid">
+    <div class="live-card">
+      <div class="live-badge">● LIVE SUNDAYS · 11 AM</div>
+      <div class="video-wrapper">
+        <!-- YouTube Live Stream embed. Replace CHANNEL_ID with the channel's ID (found in YouTube Studio > Settings > Channel > Advanced).
+             While live, this shows the active stream. At other times it shows a "no live stream" message. -->
+        <iframe
+          src="https://www.youtube.com/embed/live_stream?channel=UCEuclidChurchOfChrist"
+          title="Euclid Church of Christ — Live Worship"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <a href="https://www.youtube.com/@euclidchurchofchrist/live" class="channel-link" target="_blank" rel="noopener noreferrer">
+        ▶ Open Live Stream on YouTube
+      </a>
+    </div>
+  </section>
 
-  <!-- MAIN RECENT STREAMS PLAYLIST -->
-  <div class="video-card">
-    <div class="video-wrapper video-placeholder">
-      <p class="placeholder-text">Video Placeholder</p>
-    </div>
-    <div class="video-info">
-      <h3>Recent Live Streams & Sermons</h3>
-      <p>Watch our most recent services and messages. Join us for inspiring teachings about God's Word and spiritual growth through our community.</p>
-    </div>
-  </div>
+  <!-- SERMON LIBRARY SECTION -->
+  <section class="sermon-section">
+    <h2>Sermon Library</h2>
+    <p>Browse our collection of past sermons and Bible study messages from God's Word.</p>
 
-  <!-- FILLER PLACEHOLDER 1 -->
-  <div class="video-card">
-    <div class="video-wrapper video-placeholder featured">
-      <p class="placeholder-text">Video Placeholder</p>
-    </div>
-    <div class="video-info">
-      <h3>Featured Sermon</h3>
-      <p>A highlighted message from our ministry. Discover powerful teachings focused on practical application of biblical principles to strengthen your faith and relationship with God.</p>
-    </div>
-  </div>
+    <div class="video-grid">
 
-  <!-- FILLER PLACEHOLDER 2 -->
-  <div class="video-card">
-    <div class="video-wrapper video-placeholder archive">
-      <p class="placeholder-text">Video Placeholder</p>
-    </div>
-    <div class="video-info">
-      <h3>Bible Study Archive</h3>
-      <p>Teachings and midweek studies designed to deepen your understanding of Scripture. Explore in-depth discussions on topics that strengthen your spiritual journey and biblical literacy.</p>
-    </div>
-  </div>
+      <!-- RECENT SERMON 1 — Update VIDEO_ID with an actual YouTube video ID from the channel -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0"
+            title="Recent Sermon"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <h3>Recent Sunday Service</h3>
+          <p>Our most recent Sunday worship service. Join us as we study God's Word together and praise Him in song.</p>
+          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="watch-btn" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </div>
 
-</div>
+      <!-- RECENT SERMON 2 — Update VIDEO_ID with an actual YouTube video ID from the channel -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_2?rel=0"
+            title="Past Sermon"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <h3>Sunday Worship Service</h3>
+          <p>A past Sunday service from our congregation. Hear the Word of God proclaimed and join us in worship.</p>
+          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="watch-btn" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </div>
 
+      <!-- RECENT SERMON 3 — Update VIDEO_ID with an actual YouTube video ID from the channel -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0"
+            title="Bible Study"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="video-info">
+          <h3>Bible Study Message</h3>
+          <p>An in-depth study from our congregation designed to deepen your understanding of Scripture and strengthen your faith.</p>
+          <a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="watch-btn" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="channel-link" target="_blank" rel="noopener noreferrer">
+      View Full Sermon Archive on YouTube
+    </a>
   </section>
 
   <footer>

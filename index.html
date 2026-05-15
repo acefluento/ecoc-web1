@@ -85,30 +85,22 @@
   }
 
   .logo-mark {
-    width: 86px;
-    height: 86px;
+    width: 140px;
+    height: auto;
     margin: 0 auto 24px;
-    background: linear-gradient(135deg, var(--burgundy) 0%, var(--burgundy-glow) 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow:
-      0 0 0 1px rgba(232, 181, 74, 0.2),
-      0 0 60px -8px rgba(168, 42, 58, 0.5),
-      inset 0 -4px 12px rgba(0,0,0,0.3),
-      inset 0 4px 12px rgba(255,255,255,0.08);
-    font-family: 'Fraunces', serif;
-    font-weight: 800;
-    font-size: 52px;
-    color: var(--gold);
-    line-height: 1;
-    font-style: italic;
-    letter-spacing: -2px;
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    display: block;
+    filter:
+      drop-shadow(0 0 24px rgba(168, 42, 58, 0.45))
+      drop-shadow(0 4px 12px rgba(0,0,0,0.5));
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s;
   }
 
-  .logo-mark:hover { transform: translateY(-3px) rotate(-3deg); }
+  .logo-mark:hover {
+    transform: translateY(-3px) scale(1.04);
+    filter:
+      drop-shadow(0 0 32px rgba(168, 42, 58, 0.6))
+      drop-shadow(0 6px 16px rgba(0,0,0,0.5));
+  }
 
   .eyebrow {
     font-size: 11px;
@@ -565,6 +557,89 @@
   .about { animation-delay: 0.55s; }
   footer { animation-delay: 0.65s; }
 
+  .cta-email {
+    background: linear-gradient(135deg, rgba(122, 31, 43, 0.15), rgba(122, 31, 43, 0.05));
+    border: 1px solid var(--border-strong);
+    border-radius: 18px;
+    padding: 26px 20px 24px;
+    margin-bottom: 28px;
+    text-align: center;
+    animation: fadeUp 0.7s 0.48s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+  }
+
+  .cta-email h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+
+  .cta-email p {
+    font-size: 13.5px;
+    color: var(--cream-mute);
+    margin-bottom: 18px;
+    line-height: 1.55;
+  }
+
+  .cta-email-form {
+    display: flex;
+    gap: 8px;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .cta-email-form input[type="email"] {
+    flex: 1;
+    min-width: 0;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    padding: 12px 14px;
+    color: var(--cream);
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .cta-email-form input[type="email"]::placeholder { color: var(--text-mute); }
+
+  .cta-email-form input[type="email"]:focus {
+    border-color: var(--gold);
+    background: rgba(255, 255, 255, 0.09);
+  }
+
+  .cta-email-form button {
+    background: var(--burgundy-glow);
+    color: var(--gold-soft);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .cta-email-form button:hover {
+    background: #c0314a;
+    transform: translateY(-1px);
+  }
+
+  .cta-success {
+    display: none;
+    font-size: 13.5px;
+    color: var(--gold);
+    margin-top: 12px;
+  }
+
+  @media (max-width: 360px) {
+    .cta-email-form { flex-direction: column; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: 0.01ms !important; }
   }
@@ -576,7 +651,7 @@
 <main class="wrap">
 
   <header class="hero">
-    <div class="logo-mark" aria-label="Euclid Church of Christ">E</div>
+    <img class="logo-mark" src="images/ecocomain.png" alt="Euclid Church of Christ" />
     <h1>Church of Christ<em>at Euclid</em></h1>
     <p class="tagline">A loving and cheerful congregation. We are delighted that you have taken the time to visit us today.</p>
     <p class="verse">"But speak thou the things which become sound doctrine." — Titus 2:1</p>
@@ -699,6 +774,19 @@
 </a>
 ```
 
+  </div>
+
+  <div class="section-label"><span>Church Updates</span></div>
+  <div class="cta-email">
+    <h3>Stay in the Loop</h3>
+    <p>Enter your email to receive announcements, event reminders, and congregation updates.</p>
+    <form class="cta-email-form" name="church-updates" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="church-updates" />
+      <input type="hidden" name="bot-field" />
+      <input type="email" name="email" placeholder="Your email address" required aria-label="Email address" />
+      <button type="submit">Subscribe</button>
+    </form>
+    <p class="cta-success" role="status">Thank you — we'll be in touch!</p>
   </div>
 
   <div class="section-label"><span>Stay Connected</span></div>
