@@ -52,10 +52,7 @@
   body {
     min-height: 100vh;
     min-height: 100dvh;
-    background:
-      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(168, 42, 58, 0.18), transparent 60%),
-      radial-gradient(ellipse 60% 40% at 50% 8%, rgba(232, 181, 74, 0.10), transparent 70%),
-      var(--bg);
+    background: var(--bg);
     background-attachment: fixed;
   }
 
@@ -113,18 +110,14 @@
     overflow: hidden;
     margin: 0 auto 28px;
     background: var(--bg);
-    border: 2px solid rgba(168, 42, 58, 0.45);
-    box-shadow:
-      0 0 0 1px rgba(232, 181, 74, 0.14),
-      0 0 40px rgba(168, 42, 58, 0.38);
+    border: 2px solid rgba(232, 181, 74, 0.22);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
   }
 
   .logo-wrap:hover {
-    transform: translateY(-4px) scale(1.04);
-    box-shadow:
-      0 0 0 1px rgba(232, 181, 74, 0.22),
-      0 0 56px rgba(168, 42, 58, 0.55);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 0 0 3px rgba(232, 181, 74, 0.18), 0 12px 40px rgba(0, 0, 0, 0.8);
   }
 
   .logo-mark {
@@ -191,15 +184,15 @@
     margin: 12px auto 0;
     max-width: 340px;
     letter-spacing: 0.01em;
-    border-left: 2px solid rgba(168, 42, 58, 0.55);
+    border-left: 2px solid rgba(232, 181, 74, 0.28);
     padding-left: 12px;
     text-align: left;
   }
 
   .announce {
-    background: linear-gradient(135deg, rgba(122, 31, 43, 0.22), rgba(122, 31, 43, 0.07));
-    border: 1px solid rgba(168, 42, 58, 0.28);
-    border-left: 3px solid var(--burgundy-glow);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid rgba(232, 181, 74, 0.50);
     border-radius: 14px;
     padding: 14px 16px;
     margin-bottom: 28px;
@@ -269,9 +262,8 @@
     flex-shrink: 0;
     width: 56px;
     text-align: center;
-    border-right: 1px solid rgba(168, 42, 58, 0.22);
-    padding-right: 16px;
-    background: linear-gradient(180deg, rgba(122, 31, 43, 0.18) 0%, rgba(122, 31, 43, 0.06) 100%);
+    border-right: 1px solid var(--border);
+    background: rgba(0, 0, 0, 0.25);
     border-radius: 8px 0 0 8px;
     margin: -14px 0 -14px -16px;
     padding: 14px 16px 14px 16px;
@@ -318,11 +310,10 @@
     gap: 8px;
     background: var(--bg-elev);
     border: 1px solid var(--border);
-    border-top: 2px solid var(--burgundy);
+    border-top: 1px solid var(--border);
     border-radius: 16px;
     padding: 18px 14px;
     margin-bottom: 8px;
-    box-shadow: 0 -2px 16px -6px rgba(168, 42, 58, 0.25);
   }
 
   .time-block {
@@ -379,7 +370,7 @@
     content: '';
     flex: 1;
     height: 1px;
-    background: linear-gradient(to right, rgba(168, 42, 58, 0.30), var(--border));
+    background: linear-gradient(to right, rgba(232, 181, 74, 0.18), transparent);
   }
 
   .section-label span {
@@ -395,12 +386,12 @@
 
   .section-label span::before {
     content: '';
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    background: var(--burgundy-glow);
+    background: var(--gold);
     flex-shrink: 0;
-    box-shadow: 0 0 8px rgba(168, 42, 58, 0.6);
+    opacity: 0.7;
   }
 
   .actions {
@@ -454,8 +445,8 @@
     display: grid;
     place-items: center;
     flex-shrink: 0;
-    background: linear-gradient(135deg, rgba(122, 31, 43, 0.5), rgba(168, 42, 58, 0.3));
-    border: 1px solid rgba(232, 181, 74, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(232, 181, 74, 0.14);
     color: var(--gold);
   }
 
@@ -489,17 +480,18 @@
   }
 
   .card-primary {
-    background: linear-gradient(135deg, var(--burgundy) 0%, #5c1620 100%);
-    border-color: rgba(232, 181, 74, 0.3);
+    background: var(--bg-card);
+    border-color: rgba(232, 181, 74, 0.22);
+    border-left: 3px solid rgba(232, 181, 74, 0.55);
   }
 
   .card-primary .card-icon {
-    background: rgba(232, 181, 74, 0.15);
-    border-color: rgba(232, 181, 74, 0.35);
+    background: rgba(232, 181, 74, 0.08);
+    border-color: rgba(232, 181, 74, 0.20);
   }
 
-  .card-primary .card-sub { color: rgba(245, 233, 211, 0.7); }
-  .card-primary:hover { border-color: var(--gold); }
+  .card-primary .card-sub { color: var(--text-mute); }
+  .card-primary:hover { border-color: rgba(232, 181, 74, 0.42); }
 
   .grid-2 {
     display: grid;
@@ -625,8 +617,8 @@
   footer { animation-delay: 0.65s; }
 
   .cta-email {
-    background: linear-gradient(135deg, rgba(122, 31, 43, 0.15), rgba(122, 31, 43, 0.05));
-    border: 1px solid var(--border-strong);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 18px;
     padding: 26px 20px 24px;
     margin-bottom: 28px;
@@ -721,7 +713,7 @@
     background: rgba(10, 9, 8, 0.94);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(168, 42, 58, 0.28);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     padding: 10px 18px;
     display: flex;
     align-items: center;
@@ -775,9 +767,9 @@
   .time-changes {
     margin: 12px 0 0;
     padding: 11px 14px;
-    background: rgba(122, 31, 43, 0.12);
-    border: 1px solid rgba(168, 42, 58, 0.24);
-    border-left: 3px solid var(--burgundy-glow);
+    background: rgba(0, 0, 0, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid rgba(232, 181, 74, 0.35);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -794,7 +786,7 @@
   }
 
   .time-change-icon {
-    color: var(--burgundy-glow);
+    color: var(--text-mute);
     flex-shrink: 0;
     margin-top: 1px;
   }
