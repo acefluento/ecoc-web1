@@ -109,32 +109,29 @@
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 28px;
-    background: var(--bg);
-    border: 2px solid rgba(232, 181, 74, 0.22);
+    background: var(--burgundy-glow);
+    border: 2px solid rgba(232, 181, 74, 0.28);
     box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .logo-wrap:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 0 0 3px rgba(232, 181, 74, 0.18), 0 12px 40px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 0 3px rgba(232, 181, 74, 0.20), 0 12px 40px rgba(0, 0, 0, 0.8);
   }
 
-  .logo-mark {
-    /* scale 115% to push white edges outside the circle crop */
-    width: 115%;
-    height: 115%;
-    margin: -7.5%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-    -webkit-mask-image: none;
-    mask-image: none;
-    filter: none;
-    transition: none;
+  .logo-monogram {
+    font-family: 'Playfair Display', serif;
+    font-size: 88px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    user-select: none;
   }
-
-  .logo-mark:hover { transform: none; filter: none; }
 
   .eyebrow {
     font-size: 11px;
@@ -811,8 +808,8 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="logo-wrap">
-      <img class="logo-mark" src="images/IMG_4982.png" alt="Euclid Church of Christ" />
+    <div class="logo-wrap" aria-label="Euclid Church of Christ">
+      <span class="logo-monogram" aria-hidden="true">E</span>
     </div>
     <h1>Church of Christ<em>@EUCLID</em></h1>
     <p class="tagline">A loving and cheerful congregation. We are delighted that you have taken the time to visit us today.</p>
