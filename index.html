@@ -104,14 +104,18 @@
   }
 
   .logo-wrap {
-    width: 170px;
-    height: 170px;
+    width: 174px;
+    height: 174px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 28px;
-    background: var(--burgundy-glow);
-    border: 2px solid rgba(232, 181, 74, 0.28);
-    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
+    margin: 0 auto 32px;
+    background: radial-gradient(circle at 40% 35%, #c0354a, var(--burgundy) 60%, #4a1018);
+    border: 2px solid rgba(232, 181, 74, 0.70);
+    box-shadow:
+      0 0 0 5px rgba(10, 9, 8, 0.88),
+      0 0 0 7px rgba(232, 181, 74, 0.32),
+      0 0 28px 6px rgba(232, 181, 74, 0.22),
+      0 0 60px 18px rgba(200, 140, 30, 0.12);
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
     display: flex;
     align-items: center;
@@ -120,17 +124,22 @@
 
   .logo-wrap:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 0 0 3px rgba(232, 181, 74, 0.20), 0 12px 40px rgba(0, 0, 0, 0.8);
+    box-shadow:
+      0 0 0 5px rgba(10, 9, 8, 0.88),
+      0 0 0 7px rgba(232, 181, 74, 0.50),
+      0 0 38px 10px rgba(232, 181, 74, 0.30),
+      0 0 80px 28px rgba(200, 140, 30, 0.18);
   }
 
   .logo-monogram {
     font-family: 'Playfair Display', serif;
-    font-size: 88px;
+    font-size: 90px;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--gold-soft);
     line-height: 1;
     letter-spacing: -0.02em;
     user-select: none;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
   }
 
   .eyebrow {
@@ -149,8 +158,8 @@
     font-size: clamp(32px, 8vw, 42px);
     line-height: 1.08;
     letter-spacing: -0.02em;
-    color: var(--burgundy-glow);
-    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.8);
+    color: var(--cream);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9);
     margin-bottom: 16px;
   }
 
