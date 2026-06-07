@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0908" />
+  <title>Connect — Euclid Church of Christ</title>
+  <meta name="description" content="Visit us, call, email, join online on Zoom or YouTube, or give. All the ways to connect with the Euclid Church of Christ." />
+  <link rel="icon" href="images/IMG_4982.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0908;
+      --bg-elev: #15110f;
+      --bg-card: #1a1513;
+      --border: rgba(232,181,74,0.12);
+      --border-strong: rgba(232,181,74,0.28);
+      --burgundy: #7a1f2b;
+      --burgundy-glow: #a82a3a;
+      --gold: #e8b54a;
+      --gold-soft: #f0c569;
+      --cream: #f5e9d3;
+      --cream-mute: #c9bfae;
+      --text-mute: #8a8278;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Manrope', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+      min-height: 100dvh;
+    }
+
+    /* ── Nav ── */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,9,8,0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .site-nav-brand {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .site-nav-links { display: flex; gap: 6px; }
+
+    .site-nav-links a {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--cream-mute);
+      text-decoration: none;
+      padding: 6px 11px;
+      border-radius: 7px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .site-nav-links a:hover,
+    .site-nav-links a.active { background: rgba(168,42,58,0.2); color: var(--cream); }
+
+    /* ── Page hero ── */
+    .page-hero {
+      text-align: center;
+      padding: 52px 24px 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-hero h1 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 6vw, 38px);
+      letter-spacing: -0.02em;
+      color: var(--burgundy-glow);
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      font-size: 15px;
+      color: var(--cream-mute);
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Content ── */
+    .content-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 36px 22px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(232,181,74,0.18), transparent);
+    }
+
+    .section-label span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .section-label span::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.7;
+      flex-shrink: 0;
+    }
+
+    /* ── Action cards ── */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--cream);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: var(--border-strong);
+      background: #221b18;
+      transform: translateY(-1px);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(232,181,74,0.14);
+      color: var(--gold);
+    }
+
+    .card-icon svg { width: 20px; height: 20px; stroke: currentColor; }
+    .card-icon svg[fill="currentColor"] { stroke: none; }
+
+    .card-body { flex: 1; min-width: 0; }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--cream);
+      margin-bottom: 2px;
+    }
+
+    .card-sub {
+      font-size: 12px;
+      color: var(--text-mute);
+    }
+
+    .card-arrow {
+      color: var(--text-mute);
+      flex-shrink: 0;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .card:hover .card-arrow { transform: translateX(3px); color: var(--gold); }
+
+    .card-primary {
+      background: linear-gradient(135deg, var(--burgundy) 0%, #5c1620 100%);
+      border-color: rgba(255,255,255,0.10);
+    }
+
+    .card-primary .card-title { color: var(--cream); }
+    .card-primary .card-sub { color: rgba(245,233,211,0.60); }
+    .card-primary .card-icon { background: rgba(0,0,0,0.28); border-color: rgba(255,255,255,0.14); color: var(--cream); }
+    .card-primary .card-arrow { color: rgba(245,233,211,0.55); }
+    .card-primary:hover { border-color: rgba(255,255,255,0.20); }
+    .card-primary:hover .card-arrow { color: var(--cream); }
+
+    /* ── Visit card ── */
+    .visit-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 20px;
+    }
+
+    .visit-card h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .visit-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .visit-row:last-child { margin-bottom: 0; }
+
+    .visit-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--gold);
+    }
+
+    .visit-icon svg { width: 15px; height: 15px; stroke: currentColor; }
+
+    .visit-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 3px;
+    }
+
+    .visit-value {
+      font-size: 13.5px;
+      color: var(--cream-mute);
+      line-height: 1.5;
+    }
+
+    .visit-value a {
+      color: var(--cream-mute);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .visit-value a:hover { color: var(--gold); border-color: var(--gold); }
+
+    /* ── Contact form ── */
+    .contact-form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 20px;
+    }
+
+    .contact-form-card h2 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .contact-form-card p {
+      font-size: 13px;
+      color: var(--text-mute);
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 460px) { .form-row { grid-template-columns: 1fr; } }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      padding: 11px 13px;
+      color: var(--cream);
+      font-family: 'Manrope', sans-serif;
+      font-size: 13.5px;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      width: 100%;
+      resize: vertical;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--text-mute); }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .form-group textarea { min-height: 90px; }
+
+    .submit-btn {
+      background: var(--burgundy-glow);
+      color: var(--cream);
+      border: none;
+      border-radius: 10px;
+      padding: 12px 24px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .submit-btn:hover { background: #c0314a; transform: translateY(-1px); }
+
+    .form-success {
+      display: none;
+      font-size: 13.5px;
+      color: var(--gold);
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--bg-elev);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 12.5px;
+      color: var(--text-mute);
+      line-height: 1.7;
+    }
+
+    footer strong { color: var(--cream-mute); }
+    footer a { color: var(--gold); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="index.html" class="site-nav-brand">Euclid CoC</a>
+  <div class="site-nav-links">
+    <a href="index.html">Home</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="about.html">About</a>
+    <a href="connect.html" class="active">Connect</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>Connect With Us</h1>
+  <p>We'd love to hear from you — visit in person, join online, or reach out any time.</p>
+</div>
+
+<div class="content-wrap">
+
+  <!-- Visit In Person -->
+  <div>
+    <div class="section-label"><span>Visit In Person</span></div>
+    <div class="visit-card">
+      <h2>We Meet Every Week</h2>
+
+      <div class="visit-row">
+        <div class="visit-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="visit-label">Address</div>
+          <div class="visit-value">
+            <a href="https://maps.google.com/maps/dir/?api=1&destination=635+East+250th+St+Euclid+OH+44132" target="_blank" rel="noopener">
+              635 East 250th St<br>Euclid, OH 44132
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="visit-row">
+        <div class="visit-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="visit-label">Service Times</div>
+          <div class="visit-value">
+            Sunday Bible Study · 10:00 AM<br>
+            Sunday Worship · 11:00 AM<br>
+            Wednesday Song Practice &amp; Prayer · 7:00 PM
+          </div>
+        </div>
+      </div>
+
+      <div class="visit-row">
+        <div class="visit-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="visit-label">Phone</div>
+          <div class="visit-value"><a href="tel:+12162616505">216-261-6505</a></div>
+        </div>
+      </div>
+
+      <div class="visit-row">
+        <div class="visit-icon">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="visit-label">Email</div>
+          <div class="visit-value"><a href="mailto:euclidcoc@gmail.com">euclidcoc@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Online -->
+  <div>
+    <div class="section-label"><span>Join Online</span></div>
+    <div class="actions">
+      <a href="https://www.youtube.com/@euclidchurchofchrist/live" class="card card-primary" target="_blank" rel="noopener">
+        <div class="card-icon" aria-hidden="true">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Watch Sunday Worship Live</div>
+          <div class="card-sub">YouTube livestream · Sundays at 11 AM</div>
+        </div>
+        <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+
+      <a href="#" class="card" onclick="openZoom(); return false;">
+        <div class="card-icon" aria-hidden="true">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Wednesday Bible Study on Zoom</div>
+          <div class="card-sub">Tap to join · 7:00 PM</div>
+        </div>
+        <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+
+      <a href="https://www.youtube.com/@euclidchurchofchrist/videos" class="card" target="_blank" rel="noopener">
+        <div class="card-icon" aria-hidden="true">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Sermons &amp; Lessons Archive</div>
+          <div class="card-sub">Watch past services on YouTube</div>
+        </div>
+        <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Give -->
+  <div>
+    <div class="section-label"><span>Give</span></div>
+    <div class="actions">
+      <a href="https://launcher.nucleus.church/launcher/44c0ab401da5476a1636" class="card card-primary">
+        <div class="card-icon" aria-hidden="true">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title">Online Giving</div>
+          <div class="card-sub">Support the work of the church</div>
+        </div>
+        <svg class="card-arrow" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Send a Message -->
+  <div>
+    <div class="section-label"><span>Send a Message</span></div>
+    <div class="contact-form-card">
+      <h2>We'd Love to Hear From You</h2>
+      <p>Prayer requests, questions, or just saying hello — we'll get back to you.</p>
+      <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="bot-field" />
+        <div class="form-group">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+          </div>
+          <input type="text" name="subject" placeholder="Subject (e.g. Prayer Request, Question)" />
+          <textarea name="message" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+      <p class="form-success" id="contactSuccess">Thank you — we'll be in touch soon!</p>
+    </div>
+  </div>
+
+  <!-- Follow -->
+  <div>
+    <div class="section-label"><span>Follow</span></div>
+    <div class="actions" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <a href="https://www.facebook.com/share/19QwjXDApQ/?mibextid=wwXIfr" class="card" target="_blank" rel="noopener">
+        <div class="card-icon" aria-hidden="true">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;stroke:none"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title" style="font-size:13px">Facebook</div>
+        </div>
+      </a>
+      <a href="https://www.youtube.com/@euclidchurchofchrist" class="card" target="_blank" rel="noopener">
+        <div class="card-icon" aria-hidden="true">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" style="width:20px;height:20px;stroke:none"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+        </div>
+        <div class="card-body">
+          <div class="card-title" style="font-size:13px">YouTube</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>635 East 250th St, Euclid, OH 44132</strong></p>
+  <p>216-261-6505 · euclidcoc@gmail.com</p>
+  <p style="margin-top:12px">Crafted by <a href="https://acefluento.com" target="_blank" rel="noopener">Acefluento</a></p>
+</footer>
+
+<script>
+  function openZoom() {
+    var h = 'cwru.' + 'zoom' + '.us';
+    var p = '/j/91317392459?pwd=Z1NuVGJLY3R4cGlwMzN1ZE4rbzNsQT09';
+    window.open('https://' + h + p, '_blank', 'noopener,noreferrer');
+  }
+
+  (function () {
+    var form = document.getElementById('contactForm');
+    var success = document.getElementById('contactSuccess');
+    if (!form || !success) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fetch('/', { method: 'POST', body: new FormData(form) })
+        .then(function () { form.hidden = true; success.style.display = 'block'; })
+        .catch(function () { form.hidden = true; success.style.display = 'block'; });
+    });
+  })();
+</script>
+
+<script>
+  window.nucleusLauncherSettings = { launcherId: '44c0ab401da5476a1636' };
+  (function(l,a,u,n,c,h){u=a.createElement('script');u.type='text/javascript';u.async=true;u.src='https://launcher.nucleus.church/boot.latest.js';n=a.getElementsByTagName('script')[0];n.parentNode.insertBefore(u,n)})(window,document);
+</script>
+</body>
+</html>
